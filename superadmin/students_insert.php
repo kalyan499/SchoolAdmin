@@ -1,0 +1,87 @@
+<?php
+include("../session_validate.php");
+include("dbconnect.php");
+error_reporting(0);
+$db->connect();
+$data["first_name"]=$_POST["first_name"];
+$data["middle_name"]=$_POST["middle_name"];
+$data["last_name"]=$_POST["last_name"];
+$data["father_name"]=$_POST["stuFname"];
+$data["father_occupation"]=$_POST["father_occupation"];
+$data["mother_name"]=$_POST["stuMname"];
+$data["mother_occupation"]=$_POST["mother_occupation"];
+$data["permenant_address"]=$_POST["permenant_address"];
+$data["state_id"]=$_POST["state_id"];
+$data["nationality"]="indian";
+$data["section_id"]=$_POST["section_id"];
+$data["current_year"]=$_POST["year"];
+$data["gender"]=$_POST["gender"];
+$data["date_of_birth"]=$_POST["date_of_birth"];
+$data["sudent_photo"]="";
+$data["address"]=$_POST["address"];
+$data["mobile"]=$_POST["mobile"];
+$data["email"]=$_POST["email"];
+$data["aadhar_number"]=$_POST["aadhar_number"];
+$data["admission_number"]=$_POST["admission_number"];
+$data["roll_number"]=$_POST["roll_number"];
+$data["religion_id"]=$_POST["religion_id"];
+$data["caste_id"]=$_POST["caste_id"];
+$data["category_id"]=$_POST["category_id"];
+$data["emergency_contact_number"]=$_POST["emergency_contact_number"];
+$data["hostel_opted"]=$_POST["hostel_opted"];
+$data["transport_opted"]=$_POST["transport_opted"];
+if($_POST["hostel_opted"]=="Yes")
+$data["hostel_fees"]=$_POST["hostel_fees"];
+if($_POST["transport_opted"]=="Yes")
+{
+$data["transport_fees"]=$_POST["transport_fees"];
+$data["bus_route_id"]=$_POST["bus_route_id"];
+}
+if($_POST["agent_id"]=="")
+$data["agent_id"]="null";
+else
+$data["agent_id"]=$_POST["agent_id"];
+
+$data["parent_mobile"]=$_POST["parent_mobile"];
+$data["parent_email"]=$_POST["parent_email"];
+$data["course_id"]=$_POST["course_id"];
+$data["current_sem"]=$_POST["current_sem"];
+$data["registration_date"]=date('Y-m-d H:i:s');
+$data["approval_status"]=0;
+$data["academic_year"]=$_SESSION["academic_year"];
+$student_id=$db->query_insert("students",$data);
+$category_id=$_POST["category_id"];
+$year=$_POST["year"];
+$sem=$_POST["current_sem"];
+$course_id=$_POST["course_id"];
+$sql="select * from course_fees t1,courses t2,fee_types t3 where t1.course_id=t2.course_id and t1.fee_type_id=t3.fee_type_id and t1.category_id='$category_id' and year='$year' and t1.course_id='$course_id'";
+$res=$db->query($sql);
+while($row=$db->fetch_array($res))
+{
+$data=array();
+$data["student_id"]=$student_id;
+  $ftid=$row["fee_type_id"];
+  $data["fee_type_id"]=$ftid;
+  $data["fees"]=$_POST[$ftid];
+  $data["course_id"]=$_POST["course_id"];
+  $data["year"]=$year;
+  $data["paid_status"]="unpaid";
+  $db->query_insert("student_fees",$data);
+
+}
+
+$sql="select t1.subject_id from course_subjects t1,courses t2,subjects t3 where t1.course_id=t2.course_id and t1.subject_id=t3.subject_id and sem='$sem' and t1.course_id='$course_id'";
+$res=$db->query($sql);
+while($row=$db->fetch_array($res))
+{
+$data=array();
+$data["student_id"]=$student_id;
+  $data["subject_id"]=$row["subject_id"];
+ $data["course_id"]=$_POST["course_id"];
+  $data["sem"]=$sem;
+  $db->query_insert("student_subjects",$data);
+}
+ $db->close();
+  $_SESSION["vsims_msg"]="Student Details Updated Successfully";
+  header("location:admission_form.php");
+?>

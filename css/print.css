@@ -1,0 +1,70 @@
+
+@page {
+	
+  counter-increment: page;
+  margin-left: 0;
+  margin-right: 0;
+  margin-bottom: 0;
+  margin-top: 0;
+  padding: 0;
+}
+@page @bottom-center {
+    color: #666;
+    content: counter(page) "/" counter(pages);
+    font: normal 9pt Arial, Helvetica, sans-serif;
+  }
+
+@page:first {
+  margin-top: 0;
+}
+
+* {
+color: #000 !important;
+text-shadow: none !important;
+background: transparent !important;
+box-shadow: none !important;
+}
+   
+.instituteTitle { display:block !important; }
+header, .side-navbar, .os-tabs-w.menu-shad, .os-tabs-w, .form-group.btns, .export-section, .modal-header, .modal-footer, .main-footer {display:none; }
+
+ .modal-dialog {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.modal-content {
+  height: auto;
+  min-height: 100%;
+  border-radius: 0;
+}
+
+ body.modalprinter * {
+        visibility: hidden;
+    }
+
+   
+    body.modalprinter .modal-dialog.focused .modal-content {
+        border-width: 0; 
+    }
+
+    body.modalprinter .modal-dialog.focused .modal-content .modal-header .modal-title,
+    body.modalprinter .modal-dialog.focused .modal-content .modal-body,
+    body.modalprinter .modal-dialog.focused .modal-content .modal-body * {
+        visibility: visible;
+        
+    }
+	 body.modalprinter .modal-content { width: 21cm;}
+
+    body.modalprinter .modal-dialog.focused .modal-content .modal-header,
+    body.modalprinter .modal-dialog.focused .modal-content .modal-body {
+        padding: 0;
+         
+    }
+
+    body.modalprinter .modal-dialog.focused .modal-content .modal-header .modal-title {
+        margin-bottom: 20px;
+    } 
+	.print_invoice_copy { display:block !important; }

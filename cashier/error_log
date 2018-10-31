@@ -1,0 +1,115 @@
+[27-Mar-2018 19:55:27 UTC] PHP Notice:  Object of class mysqli_result could not be converted to int in /home/wsjju7znid3r/public_html/vins_database_class/Database.class.php on line 133
+[27-Mar-2018 19:55:27 UTC] PHP Notice:  Object of class mysqli could not be converted to int in /home/wsjju7znid3r/public_html/vins_database_class/Database.class.php on line 241
+[27-Mar-2018 19:55:27 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function mysql_error() in /home/wsjju7znid3r/public_html/vins_database_class/Database.class.php:242
+Stack trace:
+#0 /home/wsjju7znid3r/public_html/vins_database_class/Database.class.php(117): Database->oops('<b>MySQL Query ...')
+#1 /home/wsjju7znid3r/public_html/cashier/getsfees.php(35): Database->query('select sum(fees...')
+#2 {main}
+  thrown in /home/wsjju7znid3r/public_html/vins_database_class/Database.class.php on line 242
+[27-Mar-2018 19:56:15 UTC] PHP Notice:  Object of class mysqli_result could not be converted to int in /home/wsjju7znid3r/public_html/vins_database_class/Database.class.php on line 133
+[27-Mar-2018 19:56:15 UTC] PHP Notice:  Object of class mysqli could not be converted to int in /home/wsjju7znid3r/public_html/vins_database_class/Database.class.php on line 241
+[27-Mar-2018 19:56:15 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function mysql_error() in /home/wsjju7znid3r/public_html/vins_database_class/Database.class.php:242
+Stack trace:
+#0 /home/wsjju7znid3r/public_html/vins_database_class/Database.class.php(117): Database->oops('<b>MySQL Query ...')
+#1 /home/wsjju7znid3r/public_html/cashier/getsfees.php(35): Database->query('select sum(fees...')
+#2 {main}
+  thrown in /home/wsjju7znid3r/public_html/vins_database_class/Database.class.php on line 242
+[27-Mar-2018 19:56:48 UTC] PHP Notice:  Object of class mysqli_result could not be converted to int in /home/wsjju7znid3r/public_html/vins_database_class/Database.class.php on line 133
+[27-Mar-2018 19:56:48 UTC] PHP Notice:  Object of class mysqli could not be converted to int in /home/wsjju7znid3r/public_html/vins_database_class/Database.class.php on line 241
+[27-Mar-2018 19:56:48 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function mysql_error() in /home/wsjju7znid3r/public_html/vins_database_class/Database.class.php:242
+Stack trace:
+#0 /home/wsjju7znid3r/public_html/vins_database_class/Database.class.php(117): Database->oops('<b>MySQL Query ...')
+#1 /home/wsjju7znid3r/public_html/cashier/getsfees.php(35): Database->query('select sum(fees...')
+#2 {main}
+  thrown in /home/wsjju7znid3r/public_html/vins_database_class/Database.class.php on line 242
+[27-Mar-2018 19:57:31 UTC] PHP Notice:  Object of class mysqli_result could not be converted to int in /home/wsjju7znid3r/public_html/vins_database_class/Database.class.php on line 133
+[27-Mar-2018 19:57:31 UTC] PHP Notice:  Object of class mysqli could not be converted to int in /home/wsjju7znid3r/public_html/vins_database_class/Database.class.php on line 241
+[27-Mar-2018 19:57:31 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function mysql_error() in /home/wsjju7znid3r/public_html/vins_database_class/Database.class.php:242
+Stack trace:
+#0 /home/wsjju7znid3r/public_html/vins_database_class/Database.class.php(117): Database->oops('<b>MySQL Query ...')
+#1 /home/wsjju7znid3r/public_html/cashier/getsfees.php(35): Database->query('select sum(fees...')
+#2 {main}
+  thrown in /home/wsjju7znid3r/public_html/vins_database_class/Database.class.php on line 242
+[27-Mar-2018 19:58:40 UTC] PHP Notice:  Object of class mysqli_result could not be converted to int in /home/wsjju7znid3r/public_html/vins_database_class/Database.class.php on line 133
+[27-Mar-2018 19:58:40 UTC] PHP Notice:  Object of class mysqli could not be converted to int in /home/wsjju7znid3r/public_html/vins_database_class/Database.class.php on line 241
+[27-Mar-2018 19:58:40 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function mysql_error() in /home/wsjju7znid3r/public_html/vins_database_class/Database.class.php:242
+Stack trace:
+#0 /home/wsjju7znid3r/public_html/vins_database_class/Database.class.php(117): Database->oops('<b>MySQL Query ...')
+#1 /home/wsjju7znid3r/public_html/cashier/getsfees.php(35): Database->query('select sum(fees...')
+#2 {main}
+  thrown in /home/wsjju7znid3r/public_html/vins_database_class/Database.class.php on line 242
+[27-Mar-2018 19:59:23 UTC] PHP Notice:  Object of class mysqli_result could not be converted to int in /home/wsjju7znid3r/public_html/vins_database_class/Database.class.php on line 133
+[27-Mar-2018 19:59:23 UTC] PHP Notice:  Object of class mysqli could not be converted to int in /home/wsjju7znid3r/public_html/vins_database_class/Database.class.php on line 241
+[27-Mar-2018 19:59:23 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function mysql_error() in /home/wsjju7znid3r/public_html/vins_database_class/Database.class.php:242
+Stack trace:
+#0 /home/wsjju7znid3r/public_html/vins_database_class/Database.class.php(117): Database->oops('<b>MySQL Query ...')
+#1 /home/wsjju7znid3r/public_html/cashier/getsfees.php(35): Database->query('select sum(fees...')
+#2 {main}
+  thrown in /home/wsjju7znid3r/public_html/vins_database_class/Database.class.php on line 242
+[27-Mar-2018 20:04:28 UTC] PHP Notice:  Object of class mysqli_result could not be converted to int in /home/wsjju7znid3r/public_html/vins_database_class/Database.class.php on line 133
+[27-Mar-2018 20:04:28 UTC] PHP Notice:  Object of class mysqli_result could not be converted to int in /home/wsjju7znid3r/public_html/vins_database_class/Database.class.php on line 133
+[27-Mar-2018 20:04:28 UTC] PHP Notice:  Object of class mysqli_result could not be converted to int in /home/wsjju7znid3r/public_html/vins_database_class/Database.class.php on line 133
+[27-Mar-2018 20:04:28 UTC] PHP Notice:  Object of class mysqli_result could not be converted to int in /home/wsjju7znid3r/public_html/vins_database_class/Database.class.php on line 133
+[27-Mar-2018 20:04:28 UTC] PHP Notice:  Object of class mysqli_result could not be converted to int in /home/wsjju7znid3r/public_html/vins_database_class/Database.class.php on line 133
+[27-Mar-2018 20:04:28 UTC] PHP Notice:  Object of class mysqli_result could not be converted to int in /home/wsjju7znid3r/public_html/vins_database_class/Database.class.php on line 133
+[27-Mar-2018 20:04:28 UTC] PHP Notice:  Object of class mysqli_result could not be converted to int in /home/wsjju7znid3r/public_html/vins_database_class/Database.class.php on line 133
+[27-Mar-2018 20:04:28 UTC] PHP Notice:  Object of class mysqli_result could not be converted to int in /home/wsjju7znid3r/public_html/vins_database_class/Database.class.php on line 133
+[27-Mar-2018 20:04:28 UTC] PHP Notice:  Object of class mysqli_result could not be converted to int in /home/wsjju7znid3r/public_html/vins_database_class/Database.class.php on line 133
+[27-Mar-2018 20:04:41 UTC] PHP Notice:  Object of class mysqli_result could not be converted to int in /home/wsjju7znid3r/public_html/vins_database_class/Database.class.php on line 133
+[27-Mar-2018 20:04:41 UTC] PHP Notice:  Object of class mysqli_result could not be converted to int in /home/wsjju7znid3r/public_html/vins_database_class/Database.class.php on line 133
+[27-Mar-2018 20:04:41 UTC] PHP Notice:  Object of class mysqli_result could not be converted to int in /home/wsjju7znid3r/public_html/vins_database_class/Database.class.php on line 133
+[27-Mar-2018 20:04:41 UTC] PHP Notice:  Object of class mysqli_result could not be converted to int in /home/wsjju7znid3r/public_html/vins_database_class/Database.class.php on line 133
+[27-Mar-2018 20:04:41 UTC] PHP Notice:  Object of class mysqli_result could not be converted to int in /home/wsjju7znid3r/public_html/vins_database_class/Database.class.php on line 133
+[27-Mar-2018 20:04:41 UTC] PHP Notice:  Object of class mysqli_result could not be converted to int in /home/wsjju7znid3r/public_html/vins_database_class/Database.class.php on line 133
+[27-Mar-2018 20:04:41 UTC] PHP Notice:  Object of class mysqli_result could not be converted to int in /home/wsjju7znid3r/public_html/vins_database_class/Database.class.php on line 133
+[27-Mar-2018 20:04:41 UTC] PHP Notice:  Object of class mysqli_result could not be converted to int in /home/wsjju7znid3r/public_html/vins_database_class/Database.class.php on line 133
+[27-Mar-2018 20:04:41 UTC] PHP Notice:  Object of class mysqli_result could not be converted to int in /home/wsjju7znid3r/public_html/vins_database_class/Database.class.php on line 133
+[28-Mar-2018 17:09:33 UTC] PHP Notice:  Undefined index: expense_type_id in /home/wsjju7znid3r/public_html/cashier/expenses_insert.php on line 5
+[28-Mar-2018 17:09:33 UTC] PHP Notice:  Undefined index: expense_date in /home/wsjju7znid3r/public_html/cashier/expenses_insert.php on line 6
+[28-Mar-2018 17:09:33 UTC] PHP Notice:  Undefined index: expense_amount in /home/wsjju7znid3r/public_html/cashier/expenses_insert.php on line 7
+[28-Mar-2018 17:09:33 UTC] PHP Notice:  Undefined index: payment_mode in /home/wsjju7znid3r/public_html/cashier/expenses_insert.php on line 8
+[28-Mar-2018 17:09:33 UTC] PHP Notice:  Undefined index: paid_by in /home/wsjju7znid3r/public_html/cashier/expenses_insert.php on line 9
+[28-Mar-2018 17:09:33 UTC] PHP Notice:  Undefined index: remarks in /home/wsjju7znid3r/public_html/cashier/expenses_insert.php on line 10
+[29-Mar-2018 16:29:54 UTC] PHP Notice:  Undefined index: expense_id in /home/wsjju7znid3r/public_html/cashier/expenses_delete.php on line 5
+[29-Mar-2018 16:30:48 UTC] PHP Notice:  Undefined index: cash_handover_id in /home/wsjju7znid3r/public_html/cashier/cash_handover_details_delete.php on line 5
+[30-Mar-2018 19:06:59 UTC] PHP Notice:  Undefined index: from_date in /home/wsjju7znid3r/public_html/cashier/cash_handover_details_insert.php on line 5
+[30-Mar-2018 19:06:59 UTC] PHP Notice:  Undefined index: to_date in /home/wsjju7znid3r/public_html/cashier/cash_handover_details_insert.php on line 6
+[30-Mar-2018 19:06:59 UTC] PHP Notice:  Undefined index: amount in /home/wsjju7znid3r/public_html/cashier/cash_handover_details_insert.php on line 7
+[30-Mar-2018 19:06:59 UTC] PHP Notice:  Undefined index: hand_over_date in /home/wsjju7znid3r/public_html/cashier/cash_handover_details_insert.php on line 8
+[30-Mar-2018 19:06:59 UTC] PHP Notice:  Undefined index: hand_over_by in /home/wsjju7znid3r/public_html/cashier/cash_handover_details_insert.php on line 9
+[30-Mar-2018 19:06:59 UTC] PHP Notice:  Undefined index: two_thousand in /home/wsjju7znid3r/public_html/cashier/cash_handover_details_insert.php on line 10
+[30-Mar-2018 19:06:59 UTC] PHP Notice:  Undefined index: thousand in /home/wsjju7znid3r/public_html/cashier/cash_handover_details_insert.php on line 11
+[30-Mar-2018 19:06:59 UTC] PHP Notice:  Undefined index: five_hundred in /home/wsjju7znid3r/public_html/cashier/cash_handover_details_insert.php on line 12
+[30-Mar-2018 19:06:59 UTC] PHP Notice:  Undefined index: two_hundred in /home/wsjju7znid3r/public_html/cashier/cash_handover_details_insert.php on line 13
+[30-Mar-2018 19:06:59 UTC] PHP Notice:  Undefined index: hundred in /home/wsjju7znid3r/public_html/cashier/cash_handover_details_insert.php on line 14
+[30-Mar-2018 19:06:59 UTC] PHP Notice:  Undefined index: fifty in /home/wsjju7znid3r/public_html/cashier/cash_handover_details_insert.php on line 15
+[30-Mar-2018 19:06:59 UTC] PHP Notice:  Undefined index: twenty in /home/wsjju7znid3r/public_html/cashier/cash_handover_details_insert.php on line 16
+[30-Mar-2018 19:06:59 UTC] PHP Notice:  Undefined index: ten in /home/wsjju7znid3r/public_html/cashier/cash_handover_details_insert.php on line 17
+[30-Mar-2018 19:06:59 UTC] PHP Notice:  Undefined index: total in /home/wsjju7znid3r/public_html/cashier/cash_handover_details_insert.php on line 18
+[02-Apr-2018 17:02:49 UTC] PHP Notice:  Undefined index: student_payment_id in /home/wsjju7znid3r/public_html/cashier/student_payments_delete.php on line 5
+[02-Apr-2018 18:32:59 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/wsjju7znid3r/public_html/vins_database_class/Database.class.php on line 196
+[02-Apr-2018 18:32:59 UTC] PHP Notice:  Object of class mysqli could not be converted to int in /home/wsjju7znid3r/public_html/vins_database_class/Database.class.php on line 241
+[02-Apr-2018 18:32:59 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function mysql_error() in /home/wsjju7znid3r/public_html/vins_database_class/Database.class.php:242
+Stack trace:
+#0 /home/wsjju7znid3r/public_html/vins_database_class/Database.class.php(117): Database->oops('<b>MySQL Query ...')
+#1 /home/wsjju7znid3r/public_html/vins_database_class/Database.class.php(205): Database->query('UPDATE `student...')
+#2 /home/wsjju7znid3r/public_html/cashier/student_payments_update.php(12): Database->query_update('student_payment...', 'student_payment...')
+#3 {main}
+  thrown in /home/wsjju7znid3r/public_html/vins_database_class/Database.class.php on line 242
+[04-Apr-2018 18:51:10 UTC] PHP Notice:  Undefined index: cash_handover_id in /home/wsjju7znid3r/public_html/cashier/cash_handover_details_update.php on line 5
+[04-Apr-2018 18:51:10 UTC] PHP Notice:  Undefined index: from_date in /home/wsjju7znid3r/public_html/cashier/cash_handover_details_update.php on line 6
+[04-Apr-2018 18:51:10 UTC] PHP Notice:  Undefined index: to_date in /home/wsjju7znid3r/public_html/cashier/cash_handover_details_update.php on line 7
+[04-Apr-2018 18:51:10 UTC] PHP Notice:  Undefined index: amount in /home/wsjju7znid3r/public_html/cashier/cash_handover_details_update.php on line 8
+[04-Apr-2018 18:51:10 UTC] PHP Notice:  Undefined index: hand_over_date in /home/wsjju7znid3r/public_html/cashier/cash_handover_details_update.php on line 9
+[04-Apr-2018 18:51:10 UTC] PHP Notice:  Undefined index: hand_over_by in /home/wsjju7znid3r/public_html/cashier/cash_handover_details_update.php on line 10
+[04-Apr-2018 18:51:10 UTC] PHP Notice:  Undefined index: two_thousand in /home/wsjju7znid3r/public_html/cashier/cash_handover_details_update.php on line 11
+[04-Apr-2018 18:51:10 UTC] PHP Notice:  Undefined index: thousand in /home/wsjju7znid3r/public_html/cashier/cash_handover_details_update.php on line 12
+[04-Apr-2018 18:51:10 UTC] PHP Notice:  Undefined index: five_hundred in /home/wsjju7znid3r/public_html/cashier/cash_handover_details_update.php on line 13
+[04-Apr-2018 18:51:10 UTC] PHP Notice:  Undefined index: two_hundred in /home/wsjju7znid3r/public_html/cashier/cash_handover_details_update.php on line 14
+[04-Apr-2018 18:51:10 UTC] PHP Notice:  Undefined index: hundred in /home/wsjju7znid3r/public_html/cashier/cash_handover_details_update.php on line 15
+[04-Apr-2018 18:51:10 UTC] PHP Notice:  Undefined index: fifty in /home/wsjju7znid3r/public_html/cashier/cash_handover_details_update.php on line 16
+[04-Apr-2018 18:51:10 UTC] PHP Notice:  Undefined index: twenty in /home/wsjju7znid3r/public_html/cashier/cash_handover_details_update.php on line 17
+[04-Apr-2018 18:51:10 UTC] PHP Notice:  Undefined index: ten in /home/wsjju7znid3r/public_html/cashier/cash_handover_details_update.php on line 18
+[04-Apr-2018 18:51:10 UTC] PHP Notice:  Undefined index: total in /home/wsjju7znid3r/public_html/cashier/cash_handover_details_update.php on line 19
+[04-Apr-2018 18:51:10 UTC] PHP Notice:  Undefined index: cash_handover_id in /home/wsjju7znid3r/public_html/cashier/cash_handover_details_update.php on line 20
+[30-Apr-2018 04:27:07 UTC] PHP Notice:  Undefined index: cash_handover_id in /home/wsjju7znid3r/public_html/sofia_school/cashier/cash_handover_details_delete.php on line 5

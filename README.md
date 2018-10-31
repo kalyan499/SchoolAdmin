@@ -1,6 +1,18 @@
 # SchoolAdmin
 School Admin Template
 
+Go to your folder and from there open command prompt
+Step 1:* git clone "mention path from the github"
+Step 2:* git status 
+        just for status of the folder.. if you add or delete or modified pages will show one by one in command prompt
+step 3: 
+        if you want to add files in to github repositorty
+        Step a1: git add .
+        step a2: git commit -m "your current folder/files changes description"
+        step a3: git push
+        
+---------------------------------------------------------------------------------------------
+
 $ git init
 
 $ git add .

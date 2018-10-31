@@ -1,0 +1,1095 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <title>VINS Admin Management</title>
+      <meta name="description" content="">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <meta name="robots" content="all,follow">
+      <!-- Bootstrap CSS-->
+      <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
+      <link rel="stylesheet" href="vendor/bootstrap.datepicker/css/bootstrap-datepicker.css">
+      <!-- Font Awesome CSS-->
+      <link rel="stylesheet" href="vendor/font-awesome/css/font-awesome.min.css">
+      <!-- Fontastic Custom icon font-->
+      <link rel="stylesheet" href="css/fontastic.css">
+      <!-- Google fonts - Poppins -->
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,700">
+      <!-- theme stylesheet-->
+      <link rel="stylesheet" href="css/style.default.css" id="theme-stylesheet">
+      <!-- Custom stylesheet - for your changes-->
+      <link rel="stylesheet" href="css/custom.css">
+      <!-- Favicon-->
+      <link rel="shortcut icon" href="img/favicon.ico">
+      <!-- Tweaks for older IEs-->
+      <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+   </head>
+   <body>
+      <div class="page">
+         <!-- Main Navbar-->
+         <header class="header">
+            <nav class="navbar">
+               <!-- Search Box-->
+               <div class="search-box">
+                  <button class="dismiss"><i class="icon-close"></i></button>
+                  <form id="searchForm" action="#" role="search">
+                     <input type="search" placeholder="What are you looking for..." class="form-control">
+                  </form>
+               </div>
+               <div class="container-fluid">
+                  <div class="navbar-holder d-flex align-items-center justify-content-between">
+                     <!-- Navbar Header-->
+                     <div class="navbar-header">
+                        <!-- Navbar Brand -->
+                        <a href="index.html" class="navbar-brand">
+                           <div class="brand-text brand-big"><span>Admin </span><strong>Management</strong></div>
+                           <div class="brand-text brand-small"><strong>AM</strong></div>
+                        </a>
+                        <!-- Toggle Button--><a id="toggle-btn" href="#" class="menu-btn active"><span></span><span></span><span></span></a>
+                     </div>
+                     <!-- Navbar Menu -->
+                     <ul class="nav-menu list-unstyled d-flex flex-md-row align-items-md-center">
+                        <!-- Search-->
+                        <li class="nav-item d-flex align-items-center"><a id="search" href="#"><i class="icon-search"></i></a></li>
+                        <!-- Notifications-->
+                        <li class="nav-item dropdown">
+                           <a id="notifications" rel="nofollow" data-target="#" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link"><i class="fa fa-bell-o"></i><span class="badge bg-red badge-corner">12</span></a>
+                           <ul aria-labelledby="notifications" class="dropdown-menu">
+                              <li>
+                                 <a rel="nofollow" href="#" class="dropdown-item">
+                                    <div class="notification">
+                                       <div class="notification-content"><i class="fa fa-envelope bg-green"></i>You have 6 new messages </div>
+                                       <div class="notification-time"><small>4 minutes ago</small></div>
+                                    </div>
+                                 </a>
+                              </li>
+                              <li>
+                                 <a rel="nofollow" href="#" class="dropdown-item">
+                                    <div class="notification">
+                                       <div class="notification-content"><i class="fa fa-twitter bg-blue"></i>You have 2 followers</div>
+                                       <div class="notification-time"><small>4 minutes ago</small></div>
+                                    </div>
+                                 </a>
+                              </li>
+                              <li>
+                                 <a rel="nofollow" href="#" class="dropdown-item">
+                                    <div class="notification">
+                                       <div class="notification-content"><i class="fa fa-upload bg-orange"></i>Server Rebooted</div>
+                                       <div class="notification-time"><small>4 minutes ago</small></div>
+                                    </div>
+                                 </a>
+                              </li>
+                              <li>
+                                 <a rel="nofollow" href="#" class="dropdown-item">
+                                    <div class="notification">
+                                       <div class="notification-content"><i class="fa fa-twitter bg-blue"></i>You have 2 followers</div>
+                                       <div class="notification-time"><small>10 minutes ago</small></div>
+                                    </div>
+                                 </a>
+                              </li>
+                              <li><a rel="nofollow" href="#" class="dropdown-item all-notifications text-center"> <strong>view all notifications                                            </strong></a></li>
+                           </ul>
+                        </li>
+                        <!-- Messages                        -->
+                        <li class="nav-item">
+                           <a data-target="#" href="#" href="unsafe:javascript:;" class="nav-link " tabindex="0">
+                           <img src="img/avatar-1.jpg" alt="" class="rounded-circle img30_30">
+                           <span class="hidden-xs">
+                           <span data-translate="LISA" class="ng-scope">VINS</span>
+                           </span>
+                           </a>
+                        </li>
+                        <!-- Logout    -->
+                        <li class="nav-item"><a href="login.html" class="nav-link logout">Logout<i class="fa fa-sign-out"></i></a></li>
+                     </ul>
+                  </div>
+               </div>
+            </nav>
+         </header>
+         <div class="page-content d-flex align-items-stretch">
+            <!-- Side Navbar -->
+            <nav class="side-navbar">
+               <ul class="list-unstyled">
+                  <li>
+                     <a href="#drp1" aria-expanded="false" data-toggle="collapse">
+                     <i class="icon-home"></i>
+                     <span class="menu-text"> Dashboard </span>
+                     </a>
+                     <ul id="drp1" class="collapse list-unstyled">
+                        <li>
+                           <a href="index.html">
+                           <i class="menu-icon fa fa-caret-right"></i>
+                           ADMIN
+                           </a>
+                           <b class="arrow"></b>
+                        </li>
+                        <li>
+                           <a href="studentAdmindashboard.html">
+                           <i class="menu-icon fa fa-caret-right"></i>
+                           STUDENT
+                           </a>
+                           <b class="arrow"></b>
+                        </li>
+                        <li class="">
+                           <a href="parentAdmindashboard.html">
+                           <i class="menu-icon fa fa-caret-right"></i>
+                           PARENTS
+                           </a>
+                           <b class="arrow"></b>
+                        </li>
+                     </ul>
+                  </li>
+                  <li class="active">
+                     <a href="#drp2" aria-expanded="false" data-toggle="collapse">
+                     <i class="menu-icon fa fa-user"></i>
+                     <span class="menu-text"> Students </span>
+                     </a>
+                     <ul id="drp2" class="collapse list-unstyled show">
+                        <li>
+                           <a href="allStudents.html">
+                           <i class="menu-icon fa fa-caret-right"></i>
+                           All Students
+                           </a>
+                           <b class="arrow"></b>
+                        </li>
+                        <li class="">
+                           <a href="studentDetails.html">
+                           <i class="menu-icon fa fa-caret-right"></i>
+                           Student Details
+                           </a>
+                           <b class="arrow"></b>
+                        </li>
+                        <li class="active">
+                           <a href="admissionForm.html">
+                           <i class="menu-icon fa fa-caret-right"></i>
+                           Admission Form
+                           </a>
+                           <b class="arrow"></b>
+                        </li>
+                        <li class="">
+                           <a href="admissionForm.html">
+                           <i class="menu-icon fa fa-caret-right"></i>
+                           Student Promotion
+                           </a>
+                           <b class="arrow"></b>
+                        </li>
+                        <li class="">
+                           <a href="studenInvoice.html">
+                           <i class="menu-icon fa fa-caret-right"></i>
+                           Student Invoice
+                           </a>
+                           <b class="arrow"></b>
+                        </li>
+                     </ul>
+                  </li>
+                  <li>
+                     <a href="#drp3" aria-expanded="false" data-toggle="collapse">
+                     <i class="menu-icon fa fa-users"></i>
+                     <span class="menu-text"> Teachers </span>
+                     </a>
+                     <ul id="drp3" class="collapse list-unstyled ">
+                        <li>
+                           <a href="allTeachers.html">
+                           <i class="menu-icon fa fa-caret-right"></i>
+                           All Teachers
+                           </a>
+                           <b class="arrow"></b>
+                        </li>
+                        <li class="">
+                           <a href="teacherDetails.html">
+                           <i class="menu-icon fa fa-caret-right"></i>
+                           Teacher Details
+                           </a>
+                           <b class="arrow"></b>
+                        </li>
+                        <li class="">
+                           <a href="AddTeacher.html">
+                           <i class="menu-icon fa fa-caret-right"></i>
+                           Add Teacher
+                           </a>
+                           <b class="arrow"></b>
+                        </li>
+                     </ul>
+                  </li>
+                  <li>
+                     <a href="parents.html">
+                     <i class="menu-icon fa fa-user-plus"></i>
+                     <span class="menu-text"> Parents </span>
+                     </a>
+                  </li>
+                  <li>
+                     <a href="#drp4" aria-expanded="false" data-toggle="collapse">
+                     <i class="menu-icon fa fa-user-circle"></i>
+                     <span class="menu-text"> Users </span>
+                     </a>
+                     <ul id="drp4" class="collapse list-unstyled">
+                        <li>
+                           <a href="addUsers.html">
+                           <i class="menu-icon fa fa-caret-right"></i>
+                           Add users
+                           </a>
+                           <b class="arrow"></b>
+                        </li>
+                        <li>
+                           <a href="addUserRoles.html">
+                           <i class="menu-icon fa fa-caret-right"></i>
+                           Add User Roles
+                           </a>
+                           <b class="arrow"></b>
+                        </li>
+                     </ul>
+                  </li>
+                  <li>
+                     <a href="#drp5" aria-expanded="false" data-toggle="collapse">
+                     <i class="menu-icon fa fa-book"></i>
+                     <span class="menu-text"> Library </span>
+                     </a>
+                     <ul id="drp5" class="collapse list-unstyled ">
+                        <li>
+                           <a href="allBooks.html">
+                           <i class="menu-icon fa fa-caret-right"></i>
+                           All Books	
+                           </a>
+                           <b class="arrow"></b>
+                        </li>
+                        <li class="">
+                           <a href="addNewBook.html">
+                           <i class="menu-icon fa fa-caret-right"></i>
+                           Add New Book
+                           </a>
+                           <b class="arrow"></b>
+                        </li>
+                     </ul>
+                  </li>
+                  <li>
+                     <a href="#drp6" aria-expanded="false" data-toggle="collapse">
+                     <i class="menu-icon fa fa-rupee"></i>
+                     <span class="menu-text"> Account </span>
+                     </a>
+                     <ul id="drp6" class="collapse list-unstyled ">
+                        <li>
+                           <a href="feesCollection.html">
+                           <i class="menu-icon fa fa-caret-right"></i>
+                           Fees Collection	
+                           </a>
+                           <b class="arrow"></b>
+                        </li>
+                        <li class="">
+                           <a href="createStudentPayment.html">
+                           <i class="menu-icon fa fa-caret-right"></i>
+                           Create Student Payment
+                           </a>
+                           <b class="arrow"></b>
+                        </li>
+                        <li class="">
+                           <a href="staffSalary.html">
+                           <i class="menu-icon fa fa-caret-right"></i>
+                           Staff Salary System
+                           </a>
+                           <b class="arrow"></b>
+                        </li>
+                        <li class="">
+                           <a href="allExpenditure.html">
+                           <i class="menu-icon fa fa-caret-right"></i>
+                           All Expenses
+                           </a>
+                           <b class="arrow"></b>
+                        </li>
+                        <li class="">
+                           <a href="AddExpenses.html">
+                           <i class="menu-icon fa fa-caret-right"></i>
+                           Add Expenses
+                           </a>
+                           <b class="arrow"></b>
+                        </li>
+                     </ul>
+                  </li>
+                  <li>
+                     <a href="thirdPartyInfo.html">
+                     <i class="menu-icon fa fa-user-secret"></i>
+                     <span class="menu-text"> Third Party Info </span>
+                     </a>
+                  </li>
+                  <li>
+                     <a href="#drp7" aria-expanded="false" data-toggle="collapse">
+                     <i class="menu-icon fa fa-th"></i>
+                     <span class="menu-text"> Class </span>
+                     </a>
+                     <ul id="drp7" class="collapse list-unstyled ">
+                        <li>
+                           <a href="allClass.html">
+                           <i class="menu-icon fa fa-caret-right"></i>
+                           All Class
+                           </a>
+                           <b class="arrow"></b>
+                        </li>
+                        <li class="">
+                           <a href="addNewClass.html">
+                           <i class="menu-icon fa fa-caret-right"></i>
+                           Add New Class
+                           </a>
+                           <b class="arrow"></b>
+                        </li>
+                     </ul>
+                  </li>
+                  <li>
+                     <a href="subject.html">
+                     <i class="menu-icon fa fa-leanpub"></i>
+                     <span class="menu-text"> Subject </span>
+                     </a>
+                  </li>
+                  <li>
+                     <a href="classRoutine.html">
+                     <i class="menu-icon fa fa-bookmark-o"></i>
+                     <span class="menu-text"> Class Routine </span>
+                     </a>
+                  </li>
+                  <li>
+                     <a href="attendance.html">
+                     <i class="menu-icon fa fa-id-card-o"></i>
+                     <span class="menu-text"> Attendance </span>
+                     </a>
+                  </li>
+                  <li>
+                     <a href="#attendanceMenu" aria-expanded="false" data-toggle="collapse">
+                     <i class="menu-icon fa fa-id-card-o"></i>
+                     <span class="menu-text"> Attendance </span>
+                     </a>
+                     <ul id="attendanceMenu" class="collapse list-unstyled">
+                        <li>
+                           <a href="attendance.html">
+                           <i class="menu-icon fa fa-caret-right"></i>
+                           Attendance 
+                           </a>
+                           <b class="arrow"></b>
+                        </li>
+                        <li>
+                           <a href="attendanceEntry.html">
+                           <i class="menu-icon fa fa-caret-right"></i>
+                           Attendance Entry
+                           </a>
+                           <b class="arrow"></b>
+                        </li>
+                     </ul>
+                  </li>
+                  <li>
+                     <a href="#drp8" aria-expanded="false" data-toggle="collapse">
+                     <i class="menu-icon fa fa-graduation-cap"></i>
+                     <span class="menu-text"> Exam </span>
+                     </a>
+                     <ul id="drp8" class="collapse list-unstyled ">
+                        <li>
+                           <a href="examSchedule.html">
+                           <i class="menu-icon fa fa-caret-right"></i>
+                           Exam Schedule
+                           </a>
+                           <b class="arrow"></b>
+                        </li>
+                        <li class="">
+                           <a href="examGrade.html">
+                           <i class="menu-icon fa fa-caret-right"></i>
+                           Exam Grade
+                           </a>
+                           <b class="arrow"></b>
+                        </li>
+                     </ul>
+                  </li>
+                  <li>
+                     <a href="transport.html">
+                     <i class="menu-icon fa fa-taxi"></i>
+                     <span class="menu-text"> Tranport </span>
+                     </a>
+                  </li>
+                  <li>
+                     <a href="hostel.html">
+                     <i class="menu-icon fa fa-building-o"></i>
+                     <span class="menu-text"> Hostel </span>
+                     </a>
+                  </li>
+                  <li>
+                     <a href="leaveManagement.html">
+                     <i class="menu-icon fa fa-envelope-open-o"></i>
+                     <span class="menu-text"> Leave Management </span>
+                     </a>
+                  </li>
+                  <li>
+                     <a href="notice.html">
+                     <i class="menu-icon fa fa-ticket"></i>
+                     <span class="menu-text"> Notice </span>
+                     </a>
+                  </li>
+                  <li>
+                     <a href="Message.html">
+                     <i class="menu-icon fa fa-envelope-open-o"></i>
+                     <span class="menu-text"> Message </span>
+                     </a>
+                  </li>
+                  <li>
+                     <a href="attritionManagement.html">
+                     <i class="menu-icon fa fa-envelope-open-o"></i>
+                     <span class="menu-text"> Attrition Management </span>
+                     </a>
+                  </li>
+               </ul>
+               <!-- /.nav-list -->
+            </nav>
+            <div class="content-inner">
+               <!-- Page Header-->
+               <header class="page-header">
+                  <div class="container-fluid">
+                     <h2 class="no-margin-bottom">Add Student Form</h2>
+                  </div>
+               </header>
+               <!-- Dashboard Counts Section-->
+               <section class="dashboard-counts no-padding-bottom">
+                  <div class="container-fluid">
+                     <div class="row bg-white has-shadow">
+                        <div class="col-lg-12" >
+                           <div class="stepwizard">
+                              <div class="stepwizard-row setup-panel">
+                                 <div class="stepwizard-step">
+                                    <a href="#step-1" type="button" class="btn btn-primary btn-circle">1</a>
+                                    <p>Student Details</p>
+                                 </div>
+                                 <div class="stepwizard-step">
+                                    <a href="#step-2" type="button" class="btn btn-default btn-circle" disabled="disabled">2</a>
+                                    <p>Parent Details</p>
+                                 </div>
+                                 <div class="stepwizard-step">
+                                    <a href="#step-3" type="button" class="btn btn-default btn-circle" disabled="disabled">3</a>
+                                    <p>Academic Fee</p>
+                                 </div>
+                                 <div class="stepwizard-step">
+                                    <a href="#step-4" type="button" class="btn btn-default btn-circle" disabled="disabled">4</a>
+                                    <p>Transport Fee</p>
+                                 </div>
+                                 <div class="stepwizard-step">
+                                    <a href="#step-5" type="button" class="btn btn-default btn-circle" disabled="disabled">5</a>
+                                    <p>Hostel Fee</p>
+                                 </div>
+                                 <div class="stepwizard-step">
+                                    <a href="#step-6" type="button" class="btn btn-default btn-circle" disabled="disabled">6</a>
+                                    <p>Final Summary</p>
+                                 </div>
+                              </div>
+                           </div>
+                           <form role="form">
+                              <div class="row setup-content" id="step-1">
+                                 <div class="col-md-6">
+                                    <h4 class="ptb-20">Student Information - (Academic Year) 2018</h4>
+                                 </div>
+                                 <div class="col-md-6">
+                                    <div class="form-group">
+                                       <label class="control-label" for="selBoard">Board</label>
+                                       <select class="form-control" id="stuSection">
+                                          <option>ICSE</option>
+                                          <option>CBSE</option>
+                                          <option selected>STATE</option>
+                                       </select>
+                                    </div>
+                                 </div>
+                                 <!-- #section:elements.form -->
+                                 <div class="col-md-3">
+                                    <div class="form-group">
+                                       <label class="control-label" for="first_name">First Name</label>
+                                       <input maxlength="100" type="text" required="required" id="first_name" class="form-control" placeholder="Student Name">
+                                    </div>
+                                 </div>
+                                 <div class="col-md-3">
+                                    <div class="form-group">
+                                       <label class="control-label" for="middle_name">Middle name</label>
+                                       <input type="text" id="middle_name" required="required" class="form-control" placeholder="Last name">
+                                    </div>
+                                 </div>
+                                 <div class="col-md-3">
+                                    <div class="form-group">
+                                       <label class="control-label" for="last_name">Last name</label>
+                                       <input type="text" id="last_name" required="required" class="form-control" placeholder="Last name">
+                                    </div>
+                                 </div>
+                                 <div class="col-md-3">
+                                    <div class="form-group">
+                                       <label class="control-label" for="mother_name">Mother name</label>
+                                       <input type="text" id="mother_name" required="required" class="form-control" placeholder="Mother name">
+                                    </div>
+                                 </div>
+                                 <div class="col-md-3">
+                                    <div class="form-group">
+                                       <label class="control-label" for="gender">Gender </label>
+                                       <?php  echo $this->Form->control('gender_id', ['options' => $genders,'class'=>'form-control']); ?>
+                                    </div>
+                                 </div>
+                                 <div class="col-md-3">
+                                    <div class="form-group">
+                                       <label class="control-label">Date of Birth</label>
+                                       <div class="input-group">
+                                          <input class="form-control date-picker" id="dob" type="text" data-date-format="dd-mm-yyyy">
+                                          <span class="input-group-addon">
+                                          <i class="fa fa-calendar bigger-110"></i>
+                                          </span>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="col-md-3">
+                                    <div class="form-group">
+                                       <label class="control-label" for="stuPob">Place  of  birth</label>
+                                       <input type="text" id="stuPob" required="required" class="form-control" placeholder="Last name">
+                                    </div>
+                                 </div>
+                                 <div class="col-md-3">
+                                    <div class="form-group">
+                                       <label class="control-label" for="stuNationality">Nationality</label>
+                                       <input type="text" id="stuNationality" required="required" class="form-control" placeholder="Nationality">
+                                    </div>
+                                 </div>
+                                 <div class="col-md-3">
+                                    <div class="form-group">
+                                       <label class="control-label" for="stuReligion">Religion </label>
+                                       <input type="text" id="stuReligion" required="required" class="form-control" placeholder="Religion">
+                                    </div>
+                                 </div>
+                                 <div class="col-md-3">
+                                    <div class="form-group">
+                                       <label class="control-label" for="caste">Caste</label>
+                                       <input maxlength="100" type="text" required="required" id="caste" class="form-control" placeholder="Caste">
+                                    </div>
+                                 </div>
+                                 <div class="col-md-3">
+                                    <div class="form-group">
+                                       <label class="control-label" for="category">Category</label>
+                                       <select class="form-control" id="category">
+                                          <option>Category 1</option>
+                                          <option>Category 2</option>
+                                          <option>Category 3</option>
+                                       </select>
+                                    </div>
+                                 </div>
+                                 <div class="col-md-3">
+                                    <div class="form-group">
+                                       <label class="control-label" for="rad1">RTE</label>
+                                       <div class="clearfix"></div>
+                                       <div class="i-checks in-block">
+                                          <input id="rad1" type="radio" value="option1" name="a" class="radio-template">
+                                          <label for="rad1">Yes</label>
+                                       </div>
+                                       <div class="i-checks in-block">
+                                          <input id="rad2" type="radio" checked="" value="option2" name="a" class="radio-template tmpend">
+                                          <label for="rad2">No</label>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="col-md-3">
+                                    <div class="form-group">
+                                       <label class="control-label" for="stuMobileno">Student Mobile No</label>
+                                       <input type="text" id="stuMobileno" required="required" class="form-control" placeholder="Student Mobile NO">
+                                    </div>
+                                 </div>
+                                 <div class="col-md-3">
+                                    <div class="form-group">
+                                       <label class="control-label" for="stuAddress">Student Address</label>
+                                       <input type="text" id="stuAddress" required="required" class="form-control" placeholder="Student Address">
+                                    </div>
+                                 </div>
+                                 <div class="col-md-3">
+                                    <div class="form-group">
+                                       <label class="control-label" for="stuAdhaarno">Student Adhaar No</label>
+                                       <input type="text" id="stuAdhaarno" required="required" class="form-control" placeholder="Student Adhaar No">
+                                    </div>
+                                 </div>
+                                 <div class="col-md-3">
+                                    <div class="form-group">
+                                       <label class="control-label" for="stuEmail">Student eMail id</label>
+                                       <input type="text" id="stuEmail" required="required" class="form-control" placeholder="Student eMail id">
+                                    </div>
+                                 </div>
+                                 <div class="col-md-3">
+                                    <div class="form-group">
+                                       <label class="control-label" for="stuClass">Grade</label>
+                                       <select class="form-control" id="stuClass">
+                                          <option>Select Grade</option>
+                                          <option>PKG</option>
+                                          <option>LKG</option>
+                                          <option>UKG</option>
+                                          <option>1</option>
+                                          <option> 2</option>
+                                          <option> 3</option>
+                                       </select>
+                                    </div>
+                                 </div>
+                                 <div class="col-md-3">
+                                    <div class="form-group">
+                                       <label class="control-label" for="stuSection">Section</label>
+                                       <select class="form-control" id="stuSection">
+                                          <option>Section A</option>
+                                          <option>Section B</option>
+                                          <option>Section C</option>
+                                          <option selected>Not Allocated</option>
+                                       </select>
+                                    </div>
+                                 </div>
+                                 <div class="col-md-3">
+                                    <div class="form-group">
+                                       <label class="control-label" for="rollNo">Roll No</label>
+                                       <input type="text" id="rollNo" required="required" class="form-control" placeholder="Roll No" readonly>
+                                    </div>
+                                 </div>
+                                 <div class="col-md-3">
+                                    <div class="form-group">
+                                       <label class="control-label" for="stuAdmno">Admission No</label>
+                                       <input type="text" id="stuAdmno" required="required" class="form-control" placeholder="Admission No" readonly>
+                                    </div>
+                                 </div>
+                                 <div class="col-md-3">
+                                    <div class="form-group">
+                                       <label class="control-label" for="stuPhoto">Upload Student Photo</label>
+                                       <div class="card">
+                                          <input id="stuPhoto" type="file" class="form-control-file">
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="col-md-3">
+                                    <div class="form-group">
+                                       <label class="control-label" for="stuSibling1">Sibling</label>
+                                       <div class="clearfix"></div>
+                                       <div class="i-checks in-block">
+                                          <input id="stuSibling1" type="radio" value="option1" name="y" class="radio-template">
+                                          <label for="stuSibling1">Yes</label>
+                                       </div>
+                                       <div class="i-checks in-block">
+                                          <input id="stuSibling2" type="radio" checked="" value="option2" name="y" class="radio-template tmpend">
+                                          <label for="stuSibling2">No</label>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="col-md-3">
+                                 </div>
+                                 <div class="col-md-12">
+                                    <button class="btn btn-primary nextBtn btn-lg pull-right" type="button" >Next</button>
+                                 </div>
+                              </div>
+                              <div class="row setup-content" id="step-2">
+                                 <div class="col-md-12">
+                                    <div class="form-group">
+                                       <label class="control-label">Student Name</label> : Mahantesh
+                                    </div>
+                                 </div>
+                                 <div class="col-md-3">
+                                    <div class="form-group">
+                                       <label class="control-label" for="stuFname">Father Name</label>
+                                       <input type="text" id="stuFname" required="required" class="form-control" placeholder="Father Name">
+                                    </div>
+                                 </div>
+                                 <div class="col-md-3">
+                                    <div class="form-group">
+                                       <label class="control-label" for="stuFatherOccupation">Father Occupation</label>
+                                       <input type="text" id="stuFatherOccupation" required="required" class="form-control" placeholder="Father Occupation">
+                                    </div>
+                                 </div>
+                                 <div class="col-md-3">
+                                    <div class="form-group">
+                                       <label class="control-label" for="stuMothername">Mother Name</label>
+                                       <input type="text" id="stuMothername" required="required" class="form-control" placeholder="Mother Name">
+                                    </div>
+                                 </div>
+                                 <div class="col-md-3">
+                                    <div class="form-group">
+                                       <label class="control-label" for="stuMotherOccupation">Mother Occupation</label>
+                                       <input type="text" id="stuMotherOccupation" required="required" class="form-control" placeholder="Mother Occupation">
+                                    </div>
+                                 </div>
+                                 <div class="col-md-3">
+                                    <div class="form-group">
+                                       <label class="control-label" for="stuPaddress">Permanent Contact Address </label>
+                                       <input type="text" id="stuPaddress" required="required" class="form-control" placeholder="Permanent Address">
+                                    </div>
+                                 </div>
+                                 <div class="col-md-3">
+                                    <div class="form-group">
+                                       <label class="control-label" for="stuParentMobileno"> Mobile Number  </label>
+                                       <input type="text" id="stuParentMobileno" required="required" class="form-control" placeholder="Mobile Number ">
+                                    </div>
+                                 </div>
+                                 <div class="col-md-3">
+                                    <div class="form-group">
+                                       <label class="control-label" for="stuEmrcno">Emergency Contact Number  </label>
+                                       <input type="text" id="stuEmrcno" required="required" class="form-control" placeholder="Emergency Contact Number ">
+                                    </div>
+                                 </div>
+                                 <div class="col-md-3">
+                                    <div class="form-group">
+                                       <label class="control-label" for="selState">State  </label>
+                                       <select id="selState" required="required" class="form-control">
+                                          <option> Select State </option>
+                                          <option selected> Karnataka </option>
+                                          <option> Tamilnadu </option>
+                                          <option> Kerala </option>
+                                          <option> Maharashtra </option>
+                                       </select>
+                                    </div>
+                                 </div>
+                                 <div class="col-md-3">
+                                    <div class="form-group">
+                                       <label class="control-label" for="parentsEmailid">Parents eMail id  </label>
+                                       <input type="text" id="parentsEmailid" required="required" class="form-control" placeholder="Parents eMail id">
+                                    </div>
+                                 </div>
+                                 <div class="col-md-3">
+                                 </div>
+                                 <div class="col-md-3"></div>
+                                 <div class="col-md-3"></div>
+                                 <div class="col-md-12">
+                                    <button class="btn btn-primary nextBtn btn-lg pull-right" type="button" >Next</button>
+                                 </div>
+                              </div>
+                              <div class="row setup-content" id="step-3">
+                                 <div class="col-md-12">
+                                    <div class="form-group">
+                                       <label class="control-label">Student Name</label> : Mahantesh, <label class="control-label">Grade</label> : 3
+                                    </div>
+                                 </div>
+                                 <div class="col-md-4">
+                                    <div class="form-group">
+                                       <label class="control-label" for="rafee">Registration and Admission Fee</label>                     
+                                       <input type="text" required="required" id="rafee" class="form-control" placeholder="Registration and Admission Fee" />
+                                    </div>
+                                    <div class="form-group">
+                                       <label class="control-label" for="t1">Term 1</label>                     
+                                       <input type="text" required="required" id="t1" class="form-control" placeholder="Term 1" />
+                                    </div>
+                                    <div class="form-group">
+                                       <label class="control-label">Term 2</label>                     
+                                       <input type="text" required="required"  class="form-control" placeholder="Term 2" />
+                                    </div>
+                                    <div class="form-group">
+                                       <label class="control-label">Term 3</label>                     
+                                       <input type="text" required="required"  class="form-control" placeholder="Term 3" />
+                                    </div>
+                                    <div class="form-group">
+                                       <label class="control-label" for="aplpros">Application form & Prospectus</label>                     
+                                       <input type="text" required="required" id="aplpros"  class="form-control" placeholder="Application form Prospectus" />
+                                    </div>
+                                    <div class="form-group">
+                                       <label class="control-label">School Essentials</label>                     
+                                       <input type="text" required="required"  class="form-control" placeholder="School Essentials" />
+                                    </div>
+                                    <div class="form-group">
+                                       <label class="control-label">Others</label>
+                                       <input type="text" required="required"  class="form-control" placeholder="School Essentials" />
+                                    </div>
+                                 </div>
+                                 <div class="col-md-4">
+                                    <div class="form-group">
+                                       <label class="control-label">Discounts - One Time Term Payment</label>                  
+                                       <input type="text"  class="form-control" value="0" placeholder="One Time Term Payment" />
+                                    </div>
+                                    <div class="form-group">
+                                       <label class="control-label">Discounts - Sibling waiver</label>                  
+                                       <input type="text"  class="form-control" value="0" placeholder=" Sibling waiver" />
+                                    </div>
+                                 </div>
+                                 <div class="col-md-4">
+                                    <div class="form-group">
+                                       <label class="control-label">Total</label>                  
+                                       <input type="text"  class="form-control" value="0" value="" readonly/>
+                                    </div>
+                                 </div>
+                                 <div class="col-md-12">
+                                    <button class="btn btn-success btn-lg pull-right" type="button">Next</button>
+                                 </div>
+                              </div>
+                              <div class="row setup-content" id="step-4">
+                                 <div class="col-md-12">
+                                    <div class="form-group">
+                                       <label class="control-label">Employee Name</label> : Mahantesh, Grade : 3
+                                    </div>
+                                 </div>
+                                 <!--	<div class="col-md-3">
+                                    <div class="form-group">
+                                                                      <label class="control-label" for="stuTransportOpted">Transport </label>
+                                                                      <div class="clearfix"></div>
+                                                                      <div class="i-checks in-block">
+                                                                          <input id="stuTransportOpted" type="radio" checked value="option1" name="d" class="radio-template">
+                                                                          <label for="stuTransportOpted">Yes</label>
+                                                                      </div>
+                                                                      <div class="i-checks in-block">
+                                                                          <input id="stuTransportOpted2" type="radio" value="option2" name="d" class="radio-template tmpend">
+                                                                          <label for="stuTransportOpted2">No</label>
+                                                                      </div>
+                                                                  </div>
+                                    </div> -->
+                                 <div class="col-md-3">
+                                    <div class="form-group">
+                                       <label class="control-label" for="stuTransNumber">Route Number/Name</label>
+                                       <select class="form-control" id="stuTransNumber">
+                                          <option selected>Select Route Name</option>
+                                          <option>001 - Malleshwaram</option>
+                                          <option>003 - Rajajinagar</option>
+                                          <option>004 - Subramanya Nagar</option>
+                                       </select>
+                                    </div>
+                                 </div>
+                                 <div class="col-md-3">
+                                    <div class="form-group">
+                                       <label class="control-label" for="trsFees">Route Fees  </label>
+                                       <input type="text" id="trsFees" required="required" class="form-control" placeholder="Route Fees">
+                                    </div>
+                                 </div>
+                                 <div class="col-md-3">
+                                 </div>
+                                 <div class="col-md-3">
+                                 </div>
+                                 <div class="col-md-3">
+                                    <div class="form-group">
+                                       <label class="control-label" for="stuTransNumber">Sibling Student Id</label>
+                                       <select class="form-control" id="stuTransNumber">
+                                          <option selected>Select ID</option>
+                                          <option>student id 1</option>
+                                          <option>student id 1</option>
+                                          <option>student id 1</option>
+                                       </select>
+                                    </div>
+                                 </div>
+                                 <div class="col-md-3">
+                                    <div class="form-group">
+                                       <label class="control-label" for="sibStuname">Sibling Student Name  </label>
+                                       <input type="text" id="sibStuname" required="required" class="form-control" readonly placeholder="Sibling Student Name">
+                                    </div>
+                                 </div>
+                                 <div class="col-md-3">
+                                 </div>
+                                 <div class="col-md-3">
+                                 </div>
+                                 <div class="col-md-3">
+                                    <div class="form-group">
+                                       <label class="control-label" for="sibDiscount">Sibling Discount  </label>
+                                       <input type="text" id="sibDiscount" required="required" class="form-control" placeholder="Sibling Discount">
+                                    </div>
+                                 </div>
+                                 <div class="col-md-12">
+                                    <button class="btn btn-success btn-lg pull-right" type="button">Next</button>
+                                 </div>
+                              </div>
+                              <div class="row setup-content" id="step-5">
+                                 <div class="col-md-12">
+                                    <div class="form-group">
+                                       <label class="control-label">Employee Name</label> : Mahantesh, Grade :3
+                                    </div>
+                                 </div>
+                                 <div class="cleafix"></div>
+                                 <div class="col-md-3">
+                                    <div class="form-group">
+                                       <label class="control-label" for="stuHostelOpt">Hostel Details</label>
+                                       <select class="form-control" id="stuHostelOpt">
+                                          <option selected>Hostel not opted</option>
+                                          <option>Accommodation Only</option>
+                                          <option>Accommodation with Food</option>
+                                       </select>
+                                    </div>
+                                 </div>
+                                 <div class="col-md-3">
+                                    <div class="form-group">
+                                       <label class="control-label" for="hostelFees">Hostel Fees  </label>
+                                       <input type="text" id="hostelFees" required="required" value="0" class="form-control" placeholder="Hostel Fees">
+                                    </div>
+                                 </div>
+                                 <div class="col-md-12">
+                                    <button class="btn btn-success btn-lg pull-right" type="button">Next</button>
+                                 </div>
+                              </div>
+                              <div class="row setup-content" id="step-6">
+                                 <div class="col-md-12">
+                                    <div class="form-group">
+                                       <label class="control-label">Employee Name</label> : Mahantesh, Grade : 3
+                                    </div>
+                                 </div>
+                                 <div class="col-md-12 text-center">
+                                    <button class="btn btn-success btn-lg pull-right" data-toggle="modal" data-target="#myModal" type="button">Please Re-Check</button>
+                                 </div>
+                                 <!-- Modal-->
+                                 <div id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" class="modal fade text-left">
+                                    <div role="document" class="modal-dialog modal-lg">
+                                       <div class="modal-content">
+                                          <div class="modal-header">
+                                             <h4 id="exampleModalLabel" class="modal-title">Staff Details</h4>
+                                             <button type="button" data-dismiss="modal" aria-label="Close" class="close"><span aria-hidden="true">×</span></button>
+                                          </div>
+                                          <div class="modal-body">
+                           <form>
+                           <div class="row">
+                           <div class="col-md-4">
+                           <div class="form-group">
+                           <label class="control-label">Code</label>
+                           <input  maxlength="100" type="text" required="required" class="form-control" placeholder="Code"  />
+                           </div>
+                           <div class="form-group">
+                           <label class="control-label">Employee Name</label>
+                           <input maxlength="100" type="text" required="required" class="form-control" placeholder="Employee Name" />
+                           </div>
+                           <div class="form-group">
+                           <label class="control-label">Date of Birth</label>
+                           <div class="input-group">
+                           <input class="form-control date-picker" id="dob" type="text" data-date-format="dd-mm-yyyy">
+                           <span class="input-group-addon">
+                           <i class="fa fa-calendar bigger-110"></i>
+                           </span>
+                           </div>
+                           </div>
+                           </div>
+                           <div class="col-md-4">
+                           <div class="form-group">
+                           <label class="control-label">Father Name</label>
+                           <input type="text" required="required" class="form-control" placeholder="Father Name" />
+                           </div>
+                           <div class="form-group">
+                           <label class="control-label">Gender</label>
+                           <select class="form-control">
+                           <option>Male</option>
+                           <option>Female</option> 
+                           </select>
+                           </div>
+                           <div class="form-group">
+                           <label class="control-label">Email Address</label>
+                           <input type="text" required="required" class="form-control" placeholder="Email Address" />
+                           </div> 
+                           <div class="i-checks">
+                           <input id="payroll" type="checkbox" value="" class="checkbox-template">
+                           <label for="payroll">Exclude from payroll</label>
+                           </div>
+                           </div>
+                           <div class="col-md-4">
+                           <div class="card-body text-center">
+                           <div class="client-avatar"><img src="img/avatar-2.jpg" alt="..." class="img-fluid rounded-circle">
+                           <div class="status bg-green"></div>
+                           </div>
+                           <div class="client-title">
+                           <h3>Mahantesh</h3><span>Super Admin</span>
+                           </div> 
+                           <a href="#">EDIT</a>
+                           </div>
+                           </div>
+                           </div>
+                           <div class="row">
+                           <div class="col-md-12">
+                           <!-- Nav tabs -->
+                           <ul class="nav nav-tabs" role="tablist">
+                           <li role="presentation"><a href="#pDetails" aria-controls="pDetails" role="tab" data-toggle="tab"  class="active">Personal Details</a></li>
+                           <li role="presentation"><a href="#official" aria-controls="official" role="tab" data-toggle="tab">Official </a></li>
+                           <li role="presentation"><a href="#pfEsi" aria-controls="pfEsi" role="tab" data-toggle="tab">PF-ESI </a></li>
+                           <li role="presentation"><a href="#leave" aria-controls="leave" role="tab" data-toggle="tab">Leave</a></li>
+                           <li role="presentation"><a href="#salary" aria-controls="salary" role="tab" data-toggle="tab">Salary</a></li>
+                           <li role="presentation"><a href="#eDocs" aria-controls="eDocs" role="tab" data-toggle="tab">Employee Docs</a></li>
+                           </ul>
+                           <!-- Tab panes -->
+                           <div class="tab-content">
+                           <div role="tabpanel" class="tab-pane active" id="pDetails">
+                           Per
+                           </div>
+                           <div role="tabpanel" class="tab-pane" id="official">
+                           Official
+                           </div>
+                           <div role="tabpanel" class="tab-pane" id="pfEsi">...</div>
+                           <div role="tabpanel" class="tab-pane" id="leave">...</div>
+                           <div role="tabpanel" class="tab-pane" id="salary">...</div>
+                           <div role="tabpanel" class="tab-pane" id="eDocs">...</div>
+                           </div>
+                           </div>
+                           </div>
+                           </form>
+                           </div>
+                           <div class="modal-footer">
+                           <button type="button" data-dismiss="modal" class="btn btn-secondary">Close</button>
+                           <button type="button" class="btn btn-primary">Save</button>
+                           <button type="button" class="btn btn-primary">Send for Approval</button>
+                           </div>
+                           </div>
+                           </div>
+                           </div>
+                           <div class="cleafix"></div>
+                           </div>
+                           </form>
+                        </div>
+                     </div>
+                  </div>
+               </section>
+               <!-- Page Footer-->
+               <footer class="main-footer">
+                  <div class="container-fluid">
+                     <div class="row">
+                        <div class="col-sm-6">
+                           <p>All Rights Reserved &copy; 2018</p>
+                        </div>
+                        <div class="col-sm-6 text-right">
+                           <p>&copy; <a href="#" class="external">VINS</a></p>
+                        </div>
+                     </div>
+                  </div>
+               </footer>
+            </div>
+         </div>
+      </div>
+      <!-- JavaScript files-->
+      <script src="vendor/jquery/jquery.min.js"></script>
+      <script src="vendor/popper.js/umd/popper.min.js"></script>
+      <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+      <script src="vendor/bootstrap.datepicker/js/bootstrap-datepicker.min.js"> </script>
+      <script src="vendor/jquery.cookie/jquery.cookie.js"></script>
+      <script src="vendor/jquery-validation/jquery.validate.min.js"></script>
+      <!-- Main File-->
+      <script src="js/front.js"></script>
+      <script>
+         $(document).ready(function () {
+         
+            var navListItems = $('div.setup-panel div a'),
+                    allWells = $('.setup-content'),
+                    allNextBtn = $('.nextBtn');
+         
+            allWells.hide();
+         
+            navListItems.click(function (e) {
+                e.preventDefault();
+                var $target = $($(this).attr('href')),
+                        $item = $(this);
+         
+                if (!$item.hasClass('disabled')) {
+                    navListItems.removeClass('btn-primary').addClass('btn-default');
+                    $item.addClass('btn-primary');
+                    allWells.hide();
+                    $target.show();
+                    $target.find('input:eq(0)').focus();
+                }
+            });
+         
+            allNextBtn.click(function(){
+                var curStep = $(this).closest(".setup-content"),
+                    curStepBtn = curStep.attr("id"),
+                    nextStepWizard = $('div.setup-panel div a[href="#' + curStepBtn + '"]').parent().next().children("a"),
+                    curInputs = curStep.find("input[type='text'],input[type='url']"),
+                    isValid = true;
+         
+                $(".form-group").removeClass("has-error");
+                for(var i=0; i<curInputs.length; i++){
+                    if (!curInputs[i].validity.valid){
+                        isValid = false;
+                        $(curInputs[i]).closest(".form-group").addClass("has-error");
+                    }
+                }
+         
+                if (isValid)
+                    nextStepWizard.removeAttr('disabled').trigger('click');
+            });
+         
+            $('div.setup-panel div a.btn-primary').trigger('click');
+         
+         	$('.date-picker').datepicker({
+            autoclose: true,
+            todayHighlight: true,
+            toggleActive: true
+         });
+         
+         });
+      </script>
+   </body>
+</html>

@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+
+<html>
+
+  <head>
+
+    <meta charset="utf-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>VINS Admin Management</title>
+
+    <meta name="description" content="">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <meta name="robots" content="all,follow">
+
+   <?php include("metatags.php"); ?>
+
+  </head>
+
+  <body>
+
+    <div class="page">
+
+      <!-- Main Navbar-->
+     <?php include("header.php"); ?>
+
+      <div class="page-content d-flex align-items-stretch"> 
+
+        <!-- Side Navbar -->
+
+<?php include("sidebar.php"); ?>
+
+        <div class="content-inner">
+
+          <!-- Page Header-->
+
+          <header class="page-header">
+
+            <div class="container-fluid">
+
+              <h2 class="no-margin-bottom">Student Admission Form</h2>
+
+            </div>
+
+          </header>
+
+          <!-- Dashboard Counts Section-->
+<?php
+include("dbconnect.php"); 
+$db->connect(); 
+?>						
+         <section class="dashboard-counts no-padding-bottom">
+                  <div class="container-fluid">
+                     <div class="row bg-white has-shadow">
+                        <div class="col-lg-12" >
+						
+                           <div class="stepwizard">
+                              <div class="stepwizard-row setup-panel">
+                                 <div class="stepwizard-step">
+                                    <a href="#step-1" type="button" class="btn btn-primary btn-circle">1</a>
+                                    <p>Student Details</p>
+                                 </div>
+                                 <div class="stepwizard-step">
+                                    <a href="#step-2" type="button" class="btn btn-default btn-circle" disabled="disabled">2</a>
+                                    <p>Parent Details</p>
+                                 </div>
+                                 <div class="stepwizard-step">
+                                    <a href="#step-3" type="button" class="btn btn-default btn-circle" disabled="disabled">3</a>
+                                    <p>Academic Fee</p>
+                                 </div>
+                                 <div class="stepwizard-step">
+                                    <a href="#step-4" type="button" class="btn btn-default btn-circle" disabled="disabled">4</a>
+                                    <p>Transport Fee</p>
+                                 </div>
+                                 <div class="stepwizard-step">
+                                    <a href="#step-5" type="button" class="btn btn-default btn-circle" disabled="disabled">5</a>
+                                    <p>Hostel Fee</p>
+                                 </div>
+                                 <div class="stepwizard-step">
+                                    <a href="#step-6" type="button" class="btn btn-default btn-circle" disabled="disabled">6</a>
+                                    <p>Final Summary</p>
+                                 </div>
+                              </div>
+                           </div>
+   
+                           <form role="form" method="post" action="students_insert.php" enctype="multipart/form-data">
+                              <div class="row setup-content" id="step-1">
+                                 <div class="col-md-6">
+                                    <h4 class="ptb-20">Student Information - (Academic Year) 2018</h4>
+                                 </div>
+                                 <div class="col-md-6">
+                                    <div class="form-group">
+                                       <label class="control-label" for="selBoard">Board</label>
+                                       <select class="form-control" id="board" name="board">
+                                          <option>ICSE</option>
+                                          <option>CBSE</option>
+                                          <option selected>STATE</option>
+                                       </select>
+                                    </div>
+                                 </div>
+                                 <!-- #section:elements.form -->
+                                 <div class="col-md-3">
+                                    <div class="form-group">
+                                       <label class="control-label" for="first_name">First Name</label>
+                                       <input maxlength="100" type="text" required="required" id="first_name" name="first_name" class="form-control" placeholder="Student Name">
+                                    </div>
+                                 </div>
+                                 <div class="col-md-3">
+                                    <div class="form-group">
+                                       <label class="control-label" for="middle_name">Middle name</label>
+                                       <input type="text" id="middle_name" name="middle_name" required="required" class="form-control" placeholder="Middle name">
+                                    </div>
+                                 </div>
+                                 <div class="col-md-3">
+                                    <div class="form-group">
+                                       <label class="control-label" for="last_name">Last name</label>
+                                       <input type="text" id="last_name" name="last_name" required="required" class="form-control" placeholder="Last name">
+                                    </div>
+                                 </div>
+                                 <div class="col-md-3">
+                                    <div class="form-group">
+                                       <label class="control-label" for="mother_name">Mother name</label>
+                                       <input type="text" id="mother_name" name="mother_name" required="required" class="form-control" placeholder="Mother name">
+                                    </div>
+                                 </div>
+                                 <div class="col-md-3">
+                                    <div class="form-group">
+                                       <label class="control-label" for="gender">Gender </label>
+                                       <div class="clearfix"></div>
+                                       <div class="i-checks in-block">
+                                          <input id="gender" type="radio" value="Male" name="gender" class="radio-template">
+                                          <label for="rad1">Male</label>
+                                       </div>
+                                       <div class="i-checks in-block">
+                                          <input id="gender" type="radio"  value="Female" name="gender" class="radio-template tmpend">
+                                          <label for="rad2">Female</label>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="col-md-3">
+                                    <div class="form-group">
+                                       <label class="control-label">Date of Birth</label>
+                                       <div class="input-group">
+                                          <input class="form-control date-picker" id="date_of_birth" name="date_of_birth" type="date" data-date-format="dd-mm-yyyy">
+                                          <span class="input-group-addon">
+                                          <i class="fa fa-calendar bigger-110"></i>
+                                          </span>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="col-md-3">
+                                    <div class="form-group">
+                                       <label class="control-label" for="stuPob">Place  of  birth</label>
+                                       <input type="text" id="place_of_birth" name="place_of_birth" required="required" class="form-control" placeholder="Place of Birth">
+                                    </div>
+                                 </div>
+                                 <div class="col-md-3">
+                                    <div class="form-group">
+                                       <label class="control-label" for="stuNationality">Nationality</label>
+                                       <input type="text" id="nationality" name="nationality" required="required" class="form-control" placeholder="Nationality">
+                                    </div>
+                                 </div>
+                                 <div class="col-md-3">
+                                    <div class="form-group">
+                                       <label class="control-label" for="stuReligion">Religion </label>
+                                        <select id="religion_id" name="religion_id" class="col-xs-10 col-sm-12 form-control" required>
+
+	   <option value="">Select Religion</option>
+<?php
+$sqlr="select * from religions";
+$resr=$db->query($sqlr);
+while($rowr=$db->fetch_array($resr))
+{
+?>
+<option value="<?php echo $rowr["religion_id"]; ?>"><?php echo $rowr["religion_name"]; ?></option>
+<?php
+}
+?>
+</select>
+                                    </div>
+                                 </div>
+                                 <div class="col-md-3">
+                                    <div class="form-group">
+                                       <label class="control-label" for="caste">Caste</label>
+                                       <select id="caste_id" name="caste_id" class="col-xs-10 col-sm-12 form-control" required>
+
+	   <option value="">Select Caste</option>
+<?php
+$sqlr="select * from castes";
+$resr=$db->query($sqlr);
+while($rowr=$db->fetch_array($resr))
+{
+?>
+<option value="<?php echo $rowr["caste_id"]; ?>"><?php echo $rowr["caste_name"]; ?></option>
+<?php
+}
+?>
+</select>
+                                    </div>
+                                 </div>
+                                 <div class="col-md-3">
+                                    <div class="form-group">
+                                       <label class="control-label" for="category">Category</label>
+                                       <select id="category_id" name="category_id" class="col-xs-10 col-sm-12 form-control" required>
+
+	   <option value="">Select Category</option>
+<?php
+$sqlr="select * from categories";
+$resr=$db->query($sqlr);
+while($rowr=$db->fetch_array($resr))
+{
+?>
+<option value="<?php echo $rowr["category_id"]; ?>"><?php echo $rowr["category_name"]; ?></option>
+<?php
+}
+?>
+</select>
+                                    </div>
+                                 </div>
+                                 <div class="col-md-3">
+                                    <div class="form-group">
+                                       <label class="control-label" for="rad1">RTE</label>
+                                       <div class="clearfix"></div>
+                                       <div class="i-checks in-block">
+                                          <input id="rte" type="radio" value="Yes" name="rte" class="radio-template">
+                                          <label for="rad1">Yes</label>
+                                       </div>
+                                       <div class="i-checks in-block">
+                                          <input id="rte" type="radio" value="No" name="rte" class="radio-template tmpend">
+                                          <label for="rad2">No</label>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="col-md-3">
+                                    <div class="form-group">
+                                       <label class="control-label" for="stuMobileno">Student Mobile No</label>
+                                       <input type="text" id="mobile" name="mobile" required="required" class="form-control" placeholder="Student Mobile NO">
+                                    </div>
+                                 </div>
+                                 <div class="col-md-3">
+                                    <div class="form-group">
+                                       <label class="control-label" for="stuAddress">Student Address</label>
+                                       <input type="text" id="address" name="address" required="required" class="form-control" placeholder="Student Address">
+                                    </div>
+                                 </div>
+                                 <div class="col-md-3">
+                                    <div class="form-group">
+                                       <label class="control-label" for="stuAdhaarno">Student Adhaar No</label>
+                                       <input type="text" id="aadhar_number" name="aadhar_number" required="required" class="form-control" placeholder="Student Adhaar No">
+                                    </div>
+                                 </div>
+                                 <div class="col-md-3">
+                                    <div class="form-group">
+                                       <label class="control-label" for="stuEmail">Student eMail id</label>
+                                       <input type="text" id="email" name="email" required="required" class="form-control" placeholder="Student eMail id">
+                                    </div>
+                                 </div>
+                                
+                                 <div class="col-md-3">
+                                    <div class="form-group">
+                                       <label class="control-label" for="stuSection">Select Section/Course</label>
+                                       <select class="form-control" id="course_id" name="course_id">
+                                          <option value="">Select Course/Section</option>
+										<?php
+                                           $sqlr="select * from courses";
+                                           $resr=$db->query($sqlr);
+                                           while($rowr=$db->fetch_array($resr))
+                                           {
+                                        ?>
+                                         <option value="<?php echo $rowr["course_id"]; ?>"><?php echo $rowr["course_name"]; ?></option>
+                                        <?php
+                                            }
+                                       ?>
+                                       </select>
+                                    </div>
+                                 </div>
+								  <div class="col-md-3">
+                                    <div class="form-group">
+                                       <label class="control-label" for="current_class_sem">Select Class/Sem</label>
+                                       <select class="form-control" id="current_class_sem" name="current_class_sem">
+                                          <option value="">Select Class/Sem</option>
+                                          <?php
+										     $sem=1;
+											 while($sem<=8)
+											 {
+										  ?>
+										  <option><?php echo $sem++; ?></option>
+										  <?php
+										     }
+										  ?>
+                                       </select>
+                                    </div>
+                                 </div>
+                                 <div class="col-md-3">
+                                    <div class="form-group">
+                                       <label class="control-label" for="roll_number">Roll No</label>
+                                       <input type="text" id="roll_number" name="roll_number" required="required" class="form-control" placeholder="Roll No">
+                                    </div>
+                                 </div>
+                                 <div class="col-md-3">
+                                    <div class="form-group">
+                                       <label class="control-label" for="admission_number">Admission No</label>
+                                       <input type="text"  id="admission_number" name="admission_number" required="required" class="form-control" placeholder="Admission No">
+                                    </div>
+                                 </div>
+                                 <div class="col-md-3">
+                                    <div class="form-group">
+                                       <label class="control-label" for="student_photo">Upload Student Photo</label>
+                                       <div class="card">
+                                          <input id="student_photo" name="student_photo" type="file" class="form-control-file" accept="image/*" onchange="preview_image(event)">
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="col-md-3">
+                                    <div class="form-group">
+                                       <label class="control-label" for="stuSibling1">Sibling</label>
+                                       <div class="clearfix"></div>
+                                       <div class="i-checks in-block">
+                                          <input id="sibling" name="sibling" type="radio" value="Yes" class="radio-template">
+                                          <label for="stuSibling1">Yes</label>
+                                       </div>
+                                       <div class="i-checks in-block">
+                                          <input id="sibling" name="sibling"  type="radio" checked="" value="No" class="radio-template tmpend">
+                                          <label for="stuSibling2">No</label>
+                                       </div>
+                                    </div>
+                                 </div>
+                               
+								 
+                                 <div class="col-md-12">
+                                    <button class="btn btn-primary nextBtn btn-lg pull-right" type="button" >Next</button>
+                                 </div>
+								   <div class="col-md-12">
+								  <div class="card-body text-center">
+                      <div class="client-avatar"><img id="output_image" src="../img/avatar-2.jpg" alt="..." class="img-fluid">
+                        <div class="status bg-green"></div>
+                      </div>
+                      <div class="client-title">
+                       
+                      </div> 
+                     
+                    </div>
+                                 </div>
+                              </div>
+                              <div class="row setup-content" id="step-2">
+                                 <div class="col-md-12">
+                                    <div class="form-group">
+                                       <label class="control-label"><strong>Student Name :</strong></label><span id="step2_sname"></span>
+                                    </div>
+                                 </div>
+                                 <div class="col-md-3">
+                                    <div class="form-group">
+                                       <label class="control-label" for="stuFname">Father Name</label>
+                                       <input type="text" id="stuFname" name="stuFname" required="required" class="form-control" placeholder="Father Name">
+                                    </div>
+                                 </div>
+                                 <div class="col-md-3">
+                                    <div class="form-group">
+                                       <label class="control-label" for="stuFatherOccupation">Father Occupation</label>
+                                       <input type="text" id="father_occupation" name="father_occupation" required="required" class="form-control" placeholder="Father Occupation">
+                                    </div>
+                                 </div>
+                                 <div class="col-md-3">
+                                    <div class="form-group">
+                                       <label class="control-label" for="stuMothername">Mother Name</label>
+                                       <input type="text" id="stuMname" name="stuMname" required="required" class="form-control" placeholder="Mother Name">
+                                    </div>
+                                 </div>
+                                 <div class="col-md-3">
+                                    <div class="form-group">
+                                       <label class="control-label" for="stuMotherOccupation">Mother Occupation</label>
+                                       <input type="text" id="mother_occupation" name="mother_occupation" required="required" class="form-control" placeholder="Mother Occupation">
+                                    </div>
+                                 </div>
+                                 <div class="col-md-3">
+                                    <div class="form-group">
+                                       <label class="control-label" for="stuPaddress">Permanent Contact Address </label>
+                                       <input type="text" id="permenant_address" name="permenant_address" required="required" class="form-control" placeholder="Permanent Address">
+                                    </div>
+                                 </div>
+                                 <div class="col-md-3">
+                                    <div class="form-group">
+                                       <label class="control-label" for="stuParentMobileno"> Mobile Number  </label>
+                                       <input type="text" id="parent_mobile" name="parent_mobile" required="required" class="form-control" placeholder="Mobile Number ">
+                                    </div>
+                                 </div>
+                                 <div class="col-md-3">
+                                    <div class="form-group">
+                                       <label class="control-label" for="stuEmrcno">Emergency Contact Number  </label>
+                                       <input type="text" id="emergency_contact_number" name="emergency_contact_number" required="required" class="form-control" placeholder="Emergency Contact Number ">
+                                    </div>
+                                 </div>
+                                 <div class="col-md-3">
+                                    <div class="form-group">
+                                       <label class="control-label" for="selState">State  </label>
+                                       <select id="state_id" name="state_id" required="required" class="form-control">
+                                          <option> Select State </option>
+                                          <option selected> Karnataka </option>
+                                          <option> Tamilnadu </option>
+                                          <option> Kerala </option>
+                                          <option> Maharashtra </option>
+                                       </select>
+                                    </div>
+                                 </div>
+                                 <div class="col-md-3">
+                                    <div class="form-group">
+                                       <label class="control-label" for="parentsEmailid">Parents eMail id  </label>
+                                       <input type="text" id="parent_email" name="parent_email" class="form-control" placeholder="Parents eMail id">
+                                    </div>
+                                 </div>
+                                 <div class="col-md-3">
+                                 </div>
+                                 <div class="col-md-3"></div>
+                                 <div class="col-md-3"></div>
+                                 <div class="col-md-12">
+                                    <button class="btn btn-primary nextBtn btn-lg pull-right" type="button" >Next</button>
+                                 </div>
+                              </div>
+                              <div class="row setup-content" id="step-3">
+                                 <div class="col-md-12">
+                                    <div class="form-group">
+                                       <label class="control-label">Student Name</label> : <span id="step3_sname"></span>
+                                    </div>
+                                 </div>
+                                 <div class="col-md-4" id="afees">
+                                    
+                                 </div>
+                                 <div class="col-md-4">
+                                   
+                                 </div>
+                                 <div class="col-md-12">
+                                    <button class="btn btn-primary nextBtn btn-lg pull-right" type="button" >Next</button>
+                                 </div>
+                              </div>
+                              <div class="row setup-content" id="step-4">
+                                 <div class="col-md-12">
+                                    <div class="form-group">
+                                       <label class="control-label">Student Name</label> : <span id="step4_sname"></span>
+                                    </div>
+                                 </div>
+                              <div class="col-md-12">
+                                    <div class="form-group">
+                                                                      <label class="control-label" for="stuTransportOpted">Transport </label>
+                                                                      <div class="clearfix"></div>
+                                                                      <div class="i-checks in-block">
+                                                                          <input id="transport_opted" type="radio" value="Yes" name="transport_opted" class="radio-template" onClick="getroutes('Yes')">
+                                                                          <label for="transport_opted">Yes</label>
+                                                                      </div>
+                                                                      <div class="i-checks in-block">
+                                                                          <input id="transport_opted" type="radio" value="No" name="transport_opted"  checked class="radio-template tmpend" onClick="getroutes('No')">
+                                                                          <label for="stuTransportOpted2">No</label>
+                                                                      </div>
+                                                                  </div>
+                                    </div> 
+                                 
+                              
+                                <div id="transport">
+								</div> 
+                                
+                                 <div class="col-md-12">
+                                   <button class="btn btn-primary nextBtn btn-lg pull-right" type="button" >Next</button>
+                                 </div>
+                              </div>
+                              <div class="row setup-content" id="step-5">
+                                 <div class="col-md-12">
+                                    <div class="form-group">
+                                       <label class="control-label">Student Name</label> : <span id="step5_sname"></span>
+                                    </div>
+                                 </div>
+                                 <div class="cleafix"></div>
+                                 <div class="col-md-3">
+								 <div class="form-group">
+                                                                      <label class="control-label" for="stuTransportOpted">Hostel </label>
+                                                                      <div class="clearfix"></div>
+                                                                      <div class="i-checks in-block">
+                                                                          <input id="hostel_opted" type="radio" value="Yes" name="hostel_opted" class="radio-template" onClick="gethostels('Yes')">
+                                                                          <label for="transport_opted">Yes</label>
+                                                                      </div>
+                                                                      <div class="i-checks in-block">
+                                                                          <input id="hostel_opted" type="radio" value="No" name="hostel_opted"  checked class="radio-template tmpend" onClick="gethostels('No')">
+                                                                          <label for="stuTransportOpted2">No</label>
+                                                                      </div>
+                                                                  </div>
+                                    </div> 
+                                 
+                              
+                                <div id="hostel">
+								</div> 
+                                    
+                                 <div class="col-md-12">
+                                    <button class="btn btn-primary nextBtn btn-lg pull-right" type="button" >Next</button>
+                                 </div>
+                              </div>
+                              <div class="row setup-content" id="step-6">
+                                 <div class="col-md-12">
+                                    <div class="form-group">
+                                       <label class="control-label">Student Name</label> : <span id="step6_sname"></span>
+                                    </div>
+                                 </div>
+                                 <div class="col-md-12 text-center">
+                                    <button class="btn btn-success btn-lg pull-right" type="submit">Save & Send for Approval</button>
+                                 </div>
+                                 <!-- Modal-->
+                                 <div id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" class="modal fade text-left">
+                                    <div role="document" class="modal-dialog modal-lg">
+                                       <div class="modal-content">
+                                          <div class="modal-header">
+                                             <h4 id="exampleModalLabel" class="modal-title">Staff Details</h4>
+                                             <button type="button" data-dismiss="modal" aria-label="Close" class="close"><span aria-hidden="true">×</span></button>
+                                          </div>
+                                         
+                           <div class="modal-footer">
+                           <button type="button" data-dismiss="modal" class="btn btn-secondary">Close</button>
+                           <button type="button" class="btn btn-primary">Save</button>
+                           <button type="button" class="btn btn-primary">Send for Approval</button>
+                           </div>
+                           </div>
+                           </div>
+                           </div>
+                           <div class="cleafix"></div>
+                           </div>
+                           </form>
+						  
+                        </div>
+                     </div>
+                  </div>
+               </section>
+ <?php 
+						   $db->close();
+						   ?>
+          <!-- Page Footer-->
+
+         <?php include("footer.php"); ?>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  <?php include("scripts.php"); ?>
+   <script>
+         $(document).ready(function () {
+         
+            var navListItems = $('div.setup-panel div a'),
+                    allWells = $('.setup-content'),
+                    allNextBtn = $('.nextBtn');
+         
+            allWells.hide();
+         
+            navListItems.click(function (e) {
+                e.preventDefault();
+                var $target = $($(this).attr('href')),
+                        $item = $(this);
+         
+                if (!$item.hasClass('disabled')) {
+                    navListItems.removeClass('btn-primary').addClass('btn-default');
+                    $item.addClass('btn-primary');
+                    allWells.hide();
+                    $target.show();
+                    $target.find('input:eq(0)').focus();
+                }
+            });
+         
+            allNextBtn.click(function(){
+                var curStep = $(this).closest(".setup-content"),
+                    curStepBtn = curStep.attr("id"),
+                    nextStepWizard = $('div.setup-panel div a[href="#' + curStepBtn + '"]').parent().next().children("a"),
+                    curInputs = curStep.find("input[type='text'],input[type='url']"),
+                    isValid = true;
+         
+                $(".form-group").removeClass("has-error");
+                for(var i=0; i<curInputs.length; i++){
+                    if (!curInputs[i].validity.valid){
+					  alert(curInputs[i].name);
+                        isValid = false;
+                        $(curInputs[i]).closest(".form-group").addClass("has-error");
+                    }
+                }
+         
+                if (isValid)
+				{
+				   if(curStepBtn=="step-1")
+				   {
+				       $("#step2_sname").html($("#first_name").val()+" "+$("#last_name").val());
+					   $("#stuFname").val($("#middle_name").val());
+					    $("#stuMname").val($("#mother_name").val());
+				   }
+				   else  if(curStepBtn=="step-2")
+				   {
+				    $("#step3_sname").html($("#first_name").val()+" "+$("#last_name").val());
+				   getafees();
+				   }
+				    else  if(curStepBtn=="step-3")
+				   {
+				    $("#step4_sname").html($("#first_name").val()+" "+$("#last_name").val());
+				   
+				   }
+				    else  if(curStepBtn=="step-4")
+				   {
+				    $("#step5_sname").html($("#first_name").val()+" "+$("#last_name").val());
+				   
+				   }
+				    else  if(curStepBtn=="step-5")
+				   {
+				    $("#step6_sname").html($("#first_name").val()+" "+$("#last_name").val());
+				   
+				   }
+                    nextStepWizard.removeAttr('disabled').trigger('click');
+				}
+            });
+         
+            $('div.setup-panel div a.btn-primary').trigger('click');
+         
+         	$('.date-picker').datepicker({
+            autoclose: true,
+            todayHighlight: true,
+            toggleActive: true
+         });
+         
+         });
+      </script>
+<script>
+function getafees() {
+  var xhttp = new XMLHttpRequest();
+  var course_id=document.getElementById("course_id").value;
+   var sem=document.getElementById("current_class_sem").value;
+    var category_id=document.getElementById("category_id").value;
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      document.getElementById("afees").innerHTML =
+      this.responseText;
+    }
+  };
+  xhttp.open("GET", "getacademic_fees.php?category_id="+category_id+"&course_id="+course_id+"&sem="+sem, true);
+  xhttp.send();
+}
+
+function getroutes(transport_opted) {
+if(transport_opted=="Yes")
+{
+  var xhttp = new XMLHttpRequest();
+  
+ 
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      document.getElementById("transport").innerHTML =
+      this.responseText;
+    }
+  };
+  xhttp.open("GET", "getbus_routes.php", true);
+  xhttp.send();
+  }
+  else
+  {
+     document.getElementById("transport").innerHTML ="";
+  }
+}
+function getrfees() {
+  var xhttp = new XMLHttpRequest();
+  var bus_route_id=document.getElementById("bus_route_id").value;
+  
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      document.getElementById("transport_fees").value =
+      this.responseText;
+    }
+  };
+  xhttp.open("GET", "getbus_fees.php?bus_route_id="+bus_route_id, true);
+  xhttp.send();
+}
+function gethostels(hostel_opted) {
+if(hostel_opted=="Yes")
+{
+  var xhttp = new XMLHttpRequest();
+  
+ 
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      document.getElementById("hostel").innerHTML =
+      this.responseText;
+    }
+  };
+  xhttp.open("GET", "gethostel_details.php", true);
+  xhttp.send();
+  }
+  else
+  {
+     document.getElementById("hostel").innerHTML ="";
+  }
+}
+function gethfees() {
+  var xhttp = new XMLHttpRequest();
+  var hostel_id=document.getElementById("hostel_id").value;
+  var hostel_option=document.getElementById("hostel_option").value;
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      document.getElementById("hostel_fees").value =
+      this.responseText;
+    }
+  };
+  xhttp.open("GET", "gethostel_fees.php?hostel_id="+hostel_id+"&hostel_option="+hostel_option, true);
+  xhttp.send();
+}
+</script>
+<script type='text/javascript'>
+function preview_image(event) 
+{
+ var reader = new FileReader();
+ reader.onload = function()
+ {
+  var output = document.getElementById('output_image');
+  output.src = reader.result;
+ }
+ reader.readAsDataURL(event.target.files[0]);
+}
+</script>
+  </body>
+
+</html>

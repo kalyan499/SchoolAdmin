@@ -1001,7 +1001,7 @@ while($rowr=$db->fetch_array($resr))
 									   <option>Post Graduate</option>
 									   <option>Graduate</option>
 									   <option>Senior Seconday</option>
-									   <option>10th</option>
+									   <option>Xth</option>
 									   <option>Other</option>
 									   </select>
                                     </div>
@@ -1009,8 +1009,8 @@ while($rowr=$db->fetch_array($resr))
 								 
 								 <div class="col-md-3">
                                     <div class="form-group">
-                                       <label class="control-label" for="father_annual_income">Father Annual Income  </label>
-                                       <input type="text" id="father_annual_income" name="father_annual_income" class="form-control" placeholder="Father Annual Income">
+                                       <label class="control-label" for="father_occupation">Father Occupation  </label>
+                                       <input type="text" id="father_occupation" name="father_occupation" class="form-control" placeholder="Father Occupation">
                                     </div>
                                  </div>
 								 
@@ -1035,7 +1035,7 @@ while($rowr=$db->fetch_array($resr))
 									    <option>Post Graduate</option>
 									   <option>Graduate</option>
 									   <option>Senior Seconday</option>
-									   <option>10th</option>
+									   <option>Xth</option>
 									   <option>Other</option>
 									    </select>
                                     </div>
@@ -1043,11 +1043,33 @@ while($rowr=$db->fetch_array($resr))
                                  
 								 <div class="col-md-3">
                                     <div class="form-group">
-                                       <label class="control-label" for="mother_mobile"> Mother Annual Income </label>
-                                       <input type="text" id="mother_mobile" name="mother_annual_income" class="form-control" placeholder="Mother Annual Income">
+                                       <label class="control-label" for="mother_occupation"> Mother Occupation </label>
+                                       <input type="text" id="mother_occupation" name="mother_occupation" class="form-control" placeholder="Mother Occupation">
                                     </div>
                                  </div>
-                                 
+                                 <div class="col-md-4">
+                                    <div class="form-group">
+                                       <label class="control-label" for="father_annual_income">Father Annual Income  </label>
+                                       <input type="text" id="father_annual_income" name="father_annual_income" class="form-control" placeholder="Father Annual Income">
+                                    </div>
+                                 </div>
+								  <div class="col-md-4">
+                                    <div class="form-group">
+                                       <label class="control-label" for="mother_annual_income"> Mother Annual Income </label>
+                                       <input type="text" id="mother_annual_income" name="mother_annual_income" class="form-control" placeholder="Mother Annual Income">
+                                    </div>
+                                 </div>
+								  <div class="col-md-4">
+                                    <div class="form-group">
+                                       <label class="control-label" for="sms_mobile_number"> SMS Mobile Number </label>
+                                       <select id="sms_mobile_number" name="sms_mobile_number" class="form-control" placeholder="SMS Mobile Number ">
+									     <option value="">Select SMS Mobile Number</option>
+										 <option>Father Mobile Number</option>
+										 <option>Mother Mobile Number</option>
+										 <option>Gaurdian Mobile Number</option>
+									   </select>
+                                    </div>
+                                 </div>
 								  <div class="col-md-3">
                                     <div class="form-group">
                                        <label class="control-label" for="stuSibling1">Child Sponsored </label>
@@ -1302,10 +1324,12 @@ if(special_opted=="Yes")
 {
    
       document.getElementById("selcspecial").style="display:block";
+	  document.getElementById("special_need").required=true;
 	  }
 	  else
 	  {
 	  document.getElementById("selcspecial").style="display:none";
+	   document.getElementById("special_need").required=false;
 	  }
    }
        function selsponsor(sponsor_opted) {

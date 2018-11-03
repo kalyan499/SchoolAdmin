@@ -273,21 +273,21 @@ $row=$db->fetch_array($res);
                                        <label class="control-label" for="rad1">Previous School Details?<span class="mdfield">*</span></label>
                                        <div class="clearfix"></div>
                                        <div class="i-checks in-block">
-                                          <input id="dey" type="radio" value="Yes" name="de" class="radio-template" checked=""  onClick="getedetails('Yes')" <?php if($row["de"]=="Yes"){ echo "checked"; } ?>>
+                                          <input id="dey" type="radio" value="Yes" name="de" class="radio-template"  onClick="getedetails('Yes')" <?php if($row["from_other_school"]=="Yes"){ echo "checked"; } ?>>
                                           <label for="rad1">Yes</label>
                                        </div>
                                        <div class="i-checks in-block">
-                                          <input id="den" type="radio"  value="No" name="de" class="radio-template tmpend"  onClick="getedetails('No')" <?php if($row["de"]=="No"){ echo "checked"; } ?>>
+                                          <input id="den" type="radio"  value="No" name="de" class="radio-template tmpend"  onClick="getedetails('No')" <?php if($row["from_other_school"]=="No"){ echo "checked"; } ?>>
                                           <label for="rad2">No</label>
                                        </div>
                                     </div>
                                  </div>
-								  <div class="row" id="edetails" style="padding-left: 15px; padding-right: 15px; <?php if($row["de"]=="No"){ ?> display:none; <?php } ?>">
+								  <div class="row" id="edetails" style="padding-left: 15px; padding-right: 15px; <?php if($row["from_other_school"]=="No"){ ?> display:none; <?php } ?>">
 
                                 <div class="col-md-3">
 <div class="form-group">
 <label class="control-label" for="previous_school_affiliation">Previous School Affiliation<span class="mdfield">*</span></label>
-<select class="form-control" id="previous_school_affiliation" name="previous_school_affiliation" required>
+<select class="form-control" id="previous_school_affiliation" name="previous_school_affiliation"  <?php if($row["from_other_school"]=="Yes"){ ?> required <?php } ?>>
 
  <option value="">Select Previous School Affiliation</option>
   <option <?php if($row["previous_school_affiliation"]=="ICSE"){ echo "selected"; } ?>>ICSE</option>
@@ -300,7 +300,7 @@ $row=$db->fetch_array($res);
  <div class="col-md-3">
                                     <div class="form-group">
                                        <label class="control-label" for="transfer_certificate_number">Transfer Certificate No</label>
-                                       <input type="text" id="transfer_certificate_number" name="transfer_certificate_number" required="required" class="form-control" placeholder="Transfer Cirtificate No"  value="<?php echo $row["transfer_certificate_number"]; ?>">
+                                       <input type="text" id="transfer_certificate_number" name="transfer_certificate_number"   <?php if($row["from_other_school"]=="Yes"){ ?> required <?php } ?> class="form-control" placeholder="Transfer Cirtificate No"  value="<?php echo $row["transfer_certificate_number"]; ?>">
                                     </div>
                                  </div>
 <div class="col-md-3">
@@ -308,7 +308,7 @@ $row=$db->fetch_array($res);
                                        <label class="control-label">Transfer Certificate Date <span class="mdfield">*</span></label>
                                        <div class="input-group date">
 <!-- <input  id="date_of_birth" name="date_of_birth" type="text"  placeholder="dd-mm-yyyy" class="form-control dateofbirth" required="required"> -->
-                                          <input  id="transfer_certificate_date" name="transfer_certificate_date" type="text"  placeholder="dd-mm-yyyy" class="form-control" required="required"  value="<?php echo $row["transfer_certificate_date"]; ?>">
+                                          <input  id="transfer_certificate_date" name="transfer_certificate_date" type="text"  placeholder="dd-mm-yyyy" class="form-control"   <?php if($row["from_other_school"]=="Yes"){ ?> required <?php } ?>  value="<?php echo $row["transfer_certificate_date"]; ?>">
                                           <span class="input-group-addon">
                                           <i class="fa fa-calendar bigger-110"></i>
                                           </span>
@@ -318,13 +318,13 @@ $row=$db->fetch_array($res);
 <div class="col-md-3">
    <div class="form-group">
      <label class="control-label" for="previous_school_name">Previous School Name</label>
-        <input type="text" id="previous_school_name" name="previous_school_name" class="form-control" placeholder="Previous School Name"  value="<?php echo $row["previous_school_name"]; ?>">
+        <input type="text" id="previous_school_name" name="previous_school_name" class="form-control" placeholder="Previous School Name"  value="<?php echo $row["previous_school_name"]; ?>"   <?php if($row["from_other_school"]=="Yes"){ ?> required <?php } ?>>
 </div>
 </div>
 <div class="col-md-3">
    <div class="form-group">
      <label class="control-label" for="previous_school_type">Previous School Type</label>
-<select class="form-control" id="previous_school_type" name="previous_school_type" required>
+<select class="form-control" id="previous_school_type" name="previous_school_type"   <?php if($row["from_other_school"]=="Yes"){ ?> required <?php } ?>>
 
  <option value="">Select Previous School Type</option>
    <option title="Javahar Navodaya Vidyalaya" <?php if($row["previous_school_type"]=="Javahar Navodaya Vidyalaya"){ echo "selected"; } ?>>Javahar Navodaya Vidyalaya</option>
@@ -350,13 +350,13 @@ $row=$db->fetch_array($res);
 <div class="col-md-3">
    <div class="form-group">
      <label class="control-label" for="previous_school_address">Previous School Address</label>
-        <input type="text" id="previous_school_address" name="previous_school_address"   class="form-control" placeholder="Previous School Address"  value="<?php echo $row["previous_school_affiliation"]; ?>">
+        <input type="text" id="previous_school_address" name="previous_school_address"   class="form-control" placeholder="Previous School Address"  value="<?php echo $row["previous_school_affiliation"]; ?>"   <?php if($row["from_other_school"]=="Yes"){ ?> required <?php } ?>>
 </div>
 </div>
 <div class="col-md-3">
                                     <div class="form-group">
                                        <label class="control-label" for="previous_school_district_id">District</label>
-                                       <select id="previous_school_district_id" name="previous_school_district_id" required="required" class="form-control" onChange="selpschooldistrict()">
+                                       <select id="previous_school_district_id" name="previous_school_district_id"   <?php if($row["from_other_school"]=="Yes"){ ?> required <?php } ?> class="form-control" onChange="selpschooldistrict()">
 									   <option value="">Select District</option>
 									   <option value="0">Not In List</option>
 									   <?php
@@ -376,7 +376,7 @@ while($rowr=$db->fetch_array($resr))
                                     <div class="form-group">
                                        <label class="control-label" for="pschooltaluk_id">Taluk</label>
 									   <div id="taluks">
-                                       <select id="previous_school_taluk_id" name="previous_school_taluk_id" required="required" class="form-control" onChange="selpschooltaluk()">
+                                       <select id="previous_school_taluk_id" name="previous_school_taluk_id"   <?php if($row["from_other_school"]=="Yes"){ ?> required <?php } ?> class="form-control" onChange="selpschooltaluk()">
 									   <option value="">Select Taluk</option>
 									   <option value="0">Not In List</option>
 									   <?php
@@ -397,7 +397,7 @@ while($rowr=$db->fetch_array($resr))
    <div class="form-group">
      <label class="control-label" for="previous_school_city">City/Village/Town</label>
       
- <select id="previous_school_city_id" name="previous_school_city_id"   class="form-control" onChange="selpschoolcity()">
+ <select id="previous_school_city_id" name="previous_school_city_id"   class="form-control" onChange="selpschoolcity()"   <?php if($row["from_other_school"]=="Yes"){ ?> required <?php } ?>>
         <option value="">Select City/Village/Town</option>
 	<option value="0">Not In List</option>
 	<?php
@@ -417,7 +417,7 @@ while($rowr=$db->fetch_array($resr))
 <div class="col-md-3">
    <div class="form-group">
      <label class="control-label" for="previous_school_pincode">Pincode</label>
-        <input type="text" id="previous_school_pincode" name="previous_school_pincode"   class="form-control" placeholder="Previous School Pincode"  value="<?php echo $row["previous_school_pincode"]; ?>"  onblur="selpschoolpincode()">
+        <input type="text" id="previous_school_pincode" name="previous_school_pincode"   class="form-control" placeholder="Previous School Pincode"  value="<?php echo $row["previous_school_pincode"]; ?>"  onblur="selpschoolpincode()"   <?php if($row["from_other_school"]=="Yes"){ ?> required <?php } ?>>
 </div>
 </div>                                 
    </div> 
@@ -660,7 +660,7 @@ while($rowr=$db->fetch_array($resr))
                                   <div class="col-md-3" <?php if($row["category_id"]!=4){ ?> style="display:none;" <?php } ?> id="selobc" >
                                     <div class="form-group">
                                        <label class="control-label" for="caste">OBC Sub Caste <span class="mdfield">*</span></label>
-                                       <select id="obc_sub_caste_id" name="obc_sub_caste_id" class="col-xs-10 col-sm-12 form-control" required  onchange="selobc()">
+                                       <select id="obc_sub_caste_id" name="obc_sub_caste_id" class="col-xs-10 col-sm-12 form-control"   <?php if($row["category_id"]==4){ ?> required <?php } ?> onchange="selobc()">
 
 	   <option value="">Select OBC Sub Caste</option>
 <?php
@@ -770,47 +770,13 @@ while($rowr=$db->fetch_array($resr))
                                        <input type="text" id="mother_aadhar_number" name="mother_aadhar_number" class="form-control" placeholder="Mother Adhaar No" value="<?php echo $row["mother_aadhar_number"]; ?>">
                                     </div>
                                  </div>
-								  <div class="col-md-3">
-                                    <div class="form-group">
-                                       <label class="control-label" for="rad1">Belongs to BPL<span class="mdfield">*</span></label>
-                                       <div class="clearfix"></div>
-                                       <div class="i-checks in-block">
-                                          <input id="bply" type="radio" value="Yes" name="bpl" class="radio-template" onClick="selbpl('Yes')" <?php if($row["bpl"]=="Yes"){ echo "checked"; } ?>>
-                                          <label for="rad1">Yes</label>
-                                       </div>
-                                       <div class="i-checks in-block">
-                                          <input id="bpln" type="radio" checked="" value="No" name="bpl" class="radio-template tmpend" onClick="selbpl('No')" <?php if($row["bpl"]=="No"){ echo "checked"; } ?>>
-                                          <label for="rad2">No</label>
-                                       </div>
-                                    </div>
-                                 </div>
-								  <div class="col-md-3"  <?php if($row["bpl"]=="No"){ ?> style="display:none" <?php } ?> id="selbpl">
-                                    <div class="form-group">
-                                       <label class="control-label" for="bpl_card_number">BPL Card Number</label>
-                                       <input type="text" id="bpl_card_number" name="bpl_card_number" class="form-control" placeholder="BPL Card Number" value="<?php echo $row["bpl_card_number"]; ?>">
-                                    </div>
-                                 </div>
-								 <div class="col-md-3">
+								   <div class="col-md-3">
                                     <div class="form-group">
                                        <label class="control-label" for="bhagyalakshmi_bond_number">Bhagyalakshmi Bond No</label>
                                        <input type="text" id="bhagyalakshmi_bond_number" name="bhagyalakshmi_bond_number" class="form-control" placeholder="Bhagyalakshmi Bond No" value="<?php echo $row["bhagyalakshmi_bond_number"]; ?>">
                                     </div>
                                  </div>
 								  <div class="col-md-3">
-                                    <div class="form-group">
-                                       <label class="control-label" for="rad1">Child With Special Need<span class="mdfield">*</span></label>
-                                       <div class="clearfix"></div>
-                                       <div class="i-checks in-block">
-                                          <input id="childsny" type="radio" value="Yes" name="child_special_need" class="radio-template" onClick="selcspecial('Yes')" <?php if($row["child_special_need"]=="Yes"){ echo "checked"; } ?>>
-                                          <label for="rad1">Yes</label>
-                                       </div>
-                                       <div class="i-checks in-block">
-                                          <input id="childsnn" type="radio" checked="" value="No" name="child_special_need" class="radio-template tmpend" onClick="selcspecial('No')" <?php if($row["child_special_need"]=="No"){ echo "checked"; } ?>>
-                                          <label for="rad2">No</label>
-                                       </div>
-                                    </div>
-                                 </div>
-								 <div class="col-md-3" <?php if($row["child_special_need"]=="No"){ ?> style="display:none" <?php } ?> id="selcspecial">
                                     <div class="form-group">
                                        <label class="control-label" for="special_category">Special Category</label>
                                        <select class="form-control" id="special_category" name="special_category">
@@ -820,6 +786,72 @@ while($rowr=$db->fetch_array($resr))
                                           <option <?php if($row["special_category"]=="HIV Case"){ echo "selected"; } ?>>HIV Case</option>
                                           <option <?php if($row["special_category"]=="Orphans"){ echo "selected"; } ?>>Orphans</option>
 										   <option <?php if($row["special_category"]=="Other"){ echo "selected"; } ?>>Other</option>
+                                       </select>
+                                    </div>
+                                 </div>
+								  <div class="col-md-3">
+                                    <div class="form-group">
+                                       <label class="control-label" for="rad1">Belongs to BPL<span class="mdfield">*</span></label>
+                                       <div class="clearfix"></div>
+                                       <div class="i-checks in-block">
+                                          <input id="bply" type="radio" value="Yes" name="bpl" class="radio-template" onClick="selbpl('Yes')" <?php if($row["bpl"]=="Yes"){ echo "checked"; } ?>>
+                                          <label for="rad1">Yes</label>
+                                       </div>
+                                       <div class="i-checks in-block">
+                                          <input id="bpln" type="radio"  value="No" name="bpl" class="radio-template tmpend" onClick="selbpl('No')" <?php if($row["bpl"]=="No"){ echo "checked"; } ?>>
+                                          <label for="rad2">No</label>
+                                       </div>
+                                    </div>
+                                 </div>
+								
+								  <div class="col-md-3"  <?php if($row["bpl"]=="No"){ ?> style="display:none" <?php } ?> id="selbpl">
+                                    <div class="form-group">
+                                       <label class="control-label" for="bpl_card_number">BPL Card Number</label>
+                                       <input type="text" id="bpl_card_number" name="bpl_card_number" class="form-control" placeholder="BPL Card Number" value="<?php echo $row["bpl_card_number"]; ?>" >
+                                    </div>
+                                 </div>
+								
+								  <div class="col-md-3">
+                                    <div class="form-group">
+                                       <label class="control-label" for="rad1">Child With Special Need<span class="mdfield">*</span></label>
+                                       <div class="clearfix"></div>
+                                       <div class="i-checks in-block">
+                                          <input id="childsny" type="radio" value="Yes" name="child_special_need" class="radio-template" onClick="selcspecial('Yes')" <?php if($row["child_special_need"]=="Yes"){ echo "checked"; } ?>>
+                                          <label for="rad1">Yes</label>
+                                       </div>
+                                       <div class="i-checks in-block">
+                                          <input id="childsnn" type="radio" value="No" name="child_special_need" class="radio-template tmpend" onClick="selcspecial('No')" <?php if($row["child_special_need"]=="No"){ echo "checked"; } ?>>
+                                          <label for="rad2">No</label>
+                                       </div>
+                                    </div>
+                                 </div>
+								 <div class="col-md-3" <?php if($row["child_special_need"]=="No"){ ?> style="display:none" <?php } ?> id="selcspecial">
+                                    <div class="form-group">
+                                      <label class="control-label" for="special_need">Special Need</label>
+                                       <select class="form-control" id="special_need" name="special_need"  <?php if($row["child_special_need"]=="Yes"){ ?> required <?php } ?>>
+									   <option value="">Select Special Need</option>
+                                          <option  <?php if($row["special_need"]=="Visual Impairment (Blindness)"){ echo "selected"; } ?>>Visual Impairment (Blindness)</option>
+<option  <?php if($row["special_need"]=="Visual Impairment (Low-vision)"){ echo "selected"; } ?>>Visual Impairment (Low-vision)</option>
+<option  <?php if($row["special_need"]=="Speech and Language Disability"){ echo "selected"; } ?>>Hearing Imparement (Deaf and Hard of Hearing)</option>
+<option  <?php if($row["special_need"]=="Speech and Language Disability"){ echo "selected"; } ?>>Speech and Language Disability</option>
+<option  <?php if($row["special_need"]=="Loco motor impairment"){ echo "selected"; } ?>>Loco motor impairment</option>
+<option  <?php if($row["special_need"]=="Mental Illness"){ echo "selected"; } ?>>Mental Illness</option>
+<option  <?php if($row["special_need"]=="Specific Learning Disability"){ echo "selected"; } ?>>Specific Learning Disability</option>
+<option  <?php if($row["special_need"]=="Cerebral Palsy"){ echo "selected"; } ?>>Cerebral Palsy</option>
+<option  <?php if($row["special_need"]=="Autism Spectrum Disorder"){ echo "selected"; } ?>>Autism Spectrum Disorder</option>
+<option  <?php if($row["special_need"]=="Multiple Disabilities including Deaf Blindness"){ echo "selected"; } ?>>Multiple Disabilities including Deaf Blindness</option>
+<option  <?php if($row["special_need"]=="Leprosy Cured Persons"){ echo "selected"; } ?>>Leprosy Cured Persons</option>
+<option  <?php if($row["special_need"]=="Dwarfism"){ echo "selected"; } ?>>Dwarfism</option>
+<option  <?php if($row["special_need"]=="Intellectual Disability"){ echo "selected"; } ?>>Intellectual Disability</option>
+<option  <?php if($row["special_need"]=="Muscular Dystrophy"){ echo "selected"; } ?>>Muscular Dystrophy</option>
+<option  <?php if($row["special_need"]=="Chronic Neurological Conditios"){ echo "selected"; } ?>>Chronic Neurological Conditios</option>
+<option  <?php if($row["special_need"]=="Multiple Sclerosis"){ echo "selected"; } ?>>Multiple Sclerosis</option>
+<option  <?php if($row["special_need"]=="Thalassemia"){ echo "selected"; } ?>>Thalassemia</option>
+<option  <?php if($row["special_need"]=="Hemophilia"){ echo "selected"; } ?>>Hemophilia</option>
+<option  <?php if($row["special_need"]=="Sickle Cell Disease"){ echo "selected"; } ?>>Sickle Cell Disease</option>
+<option  <?php if($row["special_need"]=="Acid Attack Victim"){ echo "selected"; } ?>>Acid Attack Victim</option>
+<option  <?php if($row["special_need"]=="Parkinsons Disease"){ echo "selected"; } ?>>Parkinsons Disease</option>
+<option  <?php if($row["special_need"]=="Not Applicable"){ echo "selected"; } ?>>Not Applicable</option>
                                        </select>
                                     </div>
                                  </div>
@@ -850,7 +882,7 @@ while($rowr=$db->fetch_array($resr))
                                           <label for="stuSibling1">Yes</label>
                                        </div>
                                        <div class="i-checks in-block">
-                                          <input id="siblingn" type="radio" checked="" value="No" name="sibling" class="radio-template tmpend"  onClick="selsib1()" <?php if($row["sibling"]=="No"){ echo "checked"; } ?>>
+                                          <input id="siblingn" type="radio" value="No" name="sibling" class="radio-template tmpend"  onClick="selsib1()" <?php if($row["sibling"]=="No"){ echo "checked"; } ?>>
                                           <label for="stuSibling2">No</label>
                                        </div>
                                     </div>
@@ -958,6 +990,18 @@ while($rowr=$db->fetch_array($resr))
                                        <input type="text" id="email" name="email" class="form-control" placeholder="Student eMail id" ng-model="email" value="<?php echo $row["email"]; ?>">
                                     </div>
                                  </div>
+								  <div class="col-md-3">
+                                    <div class="form-group">
+                                       <label class="control-label" for="single_parent">Single Parent</label>
+                                       <select id="single_parent" name="single_parent" class="form-control">
+									     
+									   <option <?php if($row["single_parent"]=="NA"){ echo "selected"; } ?>>NA</option>
+									   <option <?php if($row["single_parent"]=="Father"){ echo "selected"; } ?>>Father</option>
+									   <option <?php if($row["single_parent"]=="Mother"){ echo "selected"; } ?>>Mother</option>
+									  
+									    </select>
+                                    </div>
+                                 </div>
 								   <div class="col-md-3">
                                     <div class="form-group">
                                        <label class="control-label" for="father_mobile"> Father Mobile Number <span class="mdfield">*</span> </label>
@@ -968,6 +1012,25 @@ while($rowr=$db->fetch_array($resr))
                                     <div class="form-group">
                                        <label class="control-label" for="father_email">Father eMail id  </label>
                                        <input type="text" id="father_email" name="father_email" class="form-control" placeholder="Father eMail id" value="<?php echo $row["father_email"]; ?>">
+                                    </div>
+                                 </div>
+								  <div class="col-md-3">
+                                    <div class="form-group">
+                                       <label class="control-label" for="father_education">Father Education</label>
+                                       <select id="father_education" name="father_education" class="form-control" >
+									   <option value="">Select Father Education</option>
+									   <option <?php if($row["father_education"]=="Post Graduate"){ echo "selected"; } ?>>Post Graduate</option>
+									   <option <?php if($row["father_education"]=="Graduate"){ echo "selected"; } ?>>Graduate</option>
+									   <option <?php if($row["father_education"]=="Senior Secondary"){ echo "selected"; } ?>>Senior Secondary</option>
+									   <option <?php if($row["father_education"]=="Xth"){ echo "selected"; } ?>>Xth</option>
+									   <option <?php if($row["father_education"]=="Other"){ echo "selected"; } ?>>Other</option>
+									   </select>
+                                    </div>
+                                 </div>
+								 <div class="col-md-3">
+                                    <div class="form-group">
+                                       <label class="control-label" for="father_occupation">Father Occupation  </label>
+                                       <input type="text" id="father_occupation" name="father_occupation" class="form-control" placeholder="Father Occupation" value="<?php echo $row["father_occupation"]; ?>">
                                     </div>
                                  </div>
 								    <div class="col-md-3">
@@ -983,19 +1046,7 @@ while($rowr=$db->fetch_array($resr))
                                     </div>
                                  </div>
                                 
-                                 <div class="col-md-3">
-                                    <div class="form-group">
-                                       <label class="control-label" for="father_education">Father Education</label>
-                                       <select id="father_education" name="father_education" class="form-control" >
-									   <option value="">Select Father Education</option>
-									   <option <?php if($row["father_education"]=="Post Graduate"){ echo "selected"; } ?>>Post Graduate</option>
-									   <option <?php if($row["father_education"]=="Graduate"){ echo "selected"; } ?>>Graduate</option>
-									   <option <?php if($row["father_education"]=="Senior Secondary"){ echo "selected"; } ?>>Senior Secondary</option>
-									   <option <?php if($row["father_education"]=="Xth"){ echo "selected"; } ?>>Xth</option>
-									   <option <?php if($row["father_education"]=="Other"){ echo "selected"; } ?>>Other</option>
-									   </select>
-                                    </div>
-                                 </div>
+                                
                                  
                                  <div class="col-md-3">
                                     <div class="form-group">
@@ -1010,28 +1061,33 @@ while($rowr=$db->fetch_array($resr))
 									    </select>
                                     </div>
                                  </div>
-                                 <div class="col-md-3">
+								  <div class="col-md-3">
+                                    <div class="form-group">
+                                       <label class="control-label" for="mother_occupation"> Mother Occupation </label>
+                                       <input type="text" id="mother_occupation" name="mother_occupation" class="form-control" placeholder="Mother Occupation" value="<?php echo $row["mother_occupation"]; ?>">
+                                    </div>
+                                 </div>
+                                 <div class="col-md-4">
                                     <div class="form-group">
                                        <label class="control-label" for="father_annual_income">Father Annual Income  </label>
                                        <input type="text" id="father_annual_income" name="father_annual_income" class="form-control" placeholder="Father Annual Income" value="<?php echo $row["father_annual_income"]; ?>">
                                     </div>
                                  </div>
-								    <div class="col-md-3">
+								    <div class="col-md-4">
                                     <div class="form-group">
                                        <label class="control-label" for="mother_mobile"> Mother Annual Income </label>
                                        <input type="text" id="mother_mobile" name="mother_annual_income" class="form-control" placeholder="Mother Annual Income" value="<?php echo $row["mother_annual_income"]; ?>">
                                     </div>
                                  </div>
-                                  <div class="col-md-3">
+                                 <div class="col-md-4">
                                     <div class="form-group">
-                                       <label class="control-label" for="single_parent">Single Parent</label>
-                                       <select id="single_parent" name="single_parent" class="form-control">
-									     
-									   <option <?php if($row["single_parent"]=="NA"){ echo "selected"; } ?>>NA</option>
-									   <option <?php if($row["single_parent"]=="Father"){ echo "selected"; } ?>>Father</option>
-									   <option <?php if($row["single_parent"]=="Mother"){ echo "selected"; } ?>>Mother</option>
-									  
-									    </select>
+                                       <label class="control-label" for="sms_mobile_number"> SMS Mobile Number </label>
+                                       <select id="sms_mobile_number" name="sms_mobile_number" class="form-control" placeholder="SMS Mobile Number ">
+									     <option value="">Select SMS Mobile Number</option>
+										 <option <?php if($row["sms_mobile_number"]=="Father Mobile Number"){ echo "selected"; } ?>>Father Mobile Number</option>
+										 <option <?php if($row["sms_mobile_number"]=="Mother Mobile Number"){ echo "selected"; } ?>>Mother Mobile Number</option>
+										 <option <?php if($row["sms_mobile_number"]=="Gaurdian Mobile Number"){ echo "selected"; } ?>>Gaurdian Mobile Number</option>
+									   </select>
                                     </div>
                                  </div>
 								  <div class="col-md-3">
@@ -1043,7 +1099,7 @@ while($rowr=$db->fetch_array($resr))
                                           <label for="stuSibling1">Yes</label>
                                        </div>
                                        <div class="i-checks in-block">
-                                          <input id="sponsoredn" type="radio" checked="" value="No" name="sponsored" class="radio-template tmpend"  onClick="selsponsor('No')" <?php if($row["sponsored"]=="No"){ echo "checked"; } ?>>
+                                          <input id="sponsoredn" type="radio" value="No" name="sponsored" class="radio-template tmpend"  onClick="selsponsor('No')" <?php if($row["sponsored"]=="No"){ echo "checked"; } ?>>
                                           <label for="stuSibling2">No</label>
                                        </div>
                                     </div>
@@ -1681,7 +1737,7 @@ document.getElementById("previous_school_district_id").value="";
 document.getElementById("previous_school_taluk_id").value="";
 document.getElementById("previous_school_city_id").value="";
 document.getElementById("previous_school_pincode").value="";
-document.getElementById("previous_school_affiliation").drequired=false;
+document.getElementById("previous_school_affiliation").required=false;
 document.getElementById("transfer_certificate_number").required=false;
 document.getElementById("transfer_certificate_date").required=false;
 document.getElementById("previous_school_name").required=false;

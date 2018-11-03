@@ -58,6 +58,10 @@ $data['mother_caste_certificate_number']=$_POST['mother_caste_certificate_number
 $data['mother_mobile']=$_POST['mother_mobile'];
 $data['mother_email']=$_POST['mother_email'];
 $data['mother_aadhar_number']=$_POST['mother_aadhar_number'];
+if($_POST["sms_mobile_number"]=="")
+$data["sms_mobile_number"]="null";
+else
+$data['sms_mobile_number']=$_POST['sms_mobile_number'];
 $data['permenant_address']=$_POST['permenant_address'];
 $data['state_id']=$_POST['state_id'];
 $data['country_id']=$_POST['country_id'];

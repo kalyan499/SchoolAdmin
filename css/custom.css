@@ -1454,3 +1454,19 @@ a.link-block img {
 .dataTable th, .dataTable td { white-space: nowrap; }
 
 .table-striped th, .table-striped td { white-space: nowrap}
+
+/*** SMS CHECK BOXes for innerr feature *******/
+.custom-padding { padding: 20px 10px 10px 10px }
+.primary_header {     border: 1px solid #e8e8e8; 
+    background: #f9f9f9;
+    padding: 10px 0 0px 10px;}
+    .phBody {  padding: 10px 0 0px 10px;
+    background: #fdfdfd;
+    border: 1px solid #e8e8e8;
+    border-top: none; min-height:130px}
+  .phBody .xs-p-10 {     background: #f9f9f9;
+    border-bottom: 1px solid #dae2e7;
+    margin-bottom: 10px; }
+.chkBoxes { display: block; padding-top:5px }
+.chkBoxes a { float: right; padding-right: 10px;}
+.bBottomline { border-bottom: 1px solid #dbdbdb }
